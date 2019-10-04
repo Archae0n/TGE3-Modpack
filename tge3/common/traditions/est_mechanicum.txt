@@ -16,7 +16,7 @@ tr_est_mechanicum_adopt = {
 			}
 		}
 		modifier = {
-			planet_pops_robotics_upkeep_mult = -0.15
+			pop_category_robot_upkeep_mult = -0.15
 		}
 		weight = {
 			factor = 1

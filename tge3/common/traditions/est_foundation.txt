@@ -667,7 +667,7 @@ tr_est_foundation_5 = {
 			est_uses_confederacy_traditions = yes
 		}		
 		modifier = {
-			starbase_outpost_upkeep_mult = -0.50
+			starbase_outpost_alloys_cost_mult = -0.5
 		}
 		weight = {factor =  1}
 	}
@@ -681,7 +681,7 @@ tr_est_foundation_5 = {
 			has_ethic = ethic_gestalt_consciousness
 		}	
 		modifier = {
-			starbase_outpost_upkeep_mult = -0.50
+			starbase_outpost_alloys_cost_mult = -0.5
 		}
 		weight = {
 			factor = 1

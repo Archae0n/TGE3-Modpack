@@ -47,33 +47,6 @@ tr_est_aesthetics_adopt = {
 	}
 	
 	tradition_swap = {
-		name = tr_est_aesthetics_adopt_megacorp
-		inherit_effects = no
-		inherit_icon = yes
-		inherit_name = yes
-		trigger = {
-			has_authority = auth_corporate
-		}	
-		on_enabled = {
-			every_owned_planet = {
-				limit = {
-					Or = {
-						has_building = building_corporate_monument
-						has_building = building_corporate_site
-						has_building = building_corporate_forum
-						has_building = building_corporate_vault		
-					}
-				}
-				add_modifier = {
-					modifier = mod_est_aesthetics_adopt
-					days = -1
-				}
-			}
-		}
-		weight = {factor =  1}
-	}
-	
-	tradition_swap = {
 		name = tr_est_age_adopt
 		inherit_effects = no
 		inherit_icon = no
@@ -141,25 +114,6 @@ tr_est_aesthetics_finish = {
 	}
 	
 	tradition_swap = {
-		name = tr_est_aesthetics_finish_no_cw
-		inherit_effects = no
-		inherit_icon = yes
-		inherit_name = yes
-		trigger = {
-			Or = {
-				has_ethic = ethic_spiritualist
-				has_ethic = ethic_fanatic_spiritualist
-				has_authority = auth_corporate
-			}
-		}	
-		modifier = {
-			planet_entertainers_unity_produces_add = 2
-			ascension_perks_add = 1
-		}
-		weight = {factor =  1}
-	}
-	
-	tradition_swap = {
 		name = tr_est_age_finish
 		inherit_effects = no
 		inherit_icon = no
@@ -223,7 +177,7 @@ tr_est_aesthetics_2 = {
 			}
 		}	
 		modifier = {		
-			rivalries_influence_produces_mult = 0.25
+			rivalries_influence_produces_mult = 0.10
 		}
 		weight = {factor =  1}
 	}
@@ -290,8 +244,7 @@ tr_est_aesthetics_3 = {
 			}
 		}	
 		modifier = {
-			country_trade_attractiveness = 0.05
-			planet_immigration_pull_mult = 0.25
+                        country_unity_produces_mult = 0.10
 		}
 		weight = {factor =  1}
 	}

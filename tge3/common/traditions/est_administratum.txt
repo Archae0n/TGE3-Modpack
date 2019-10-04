@@ -18,9 +18,9 @@ tr_est_administratum_adopt = {
 			factor = 1
 		}
 	}
-	
+
 	ai_weight = {
-		factor = 10	
+		factor = 10
 		modifier = {
 			factor = 2
 			has_authority = auth_democratic
@@ -32,20 +32,20 @@ tr_est_administratum_adopt = {
 		modifier = {
 			factor = 2
 			has_valid_civic = civic_hive_natural_neural_network
-		}	
+		}
 		modifier = {
 			factor = 2
 			has_valid_civic = civic_hive_divided_attention
-		}	
+		}
 		modifier = {
 			factor = 0
-			est_no_fed_federation_builders = yes			
+			est_no_fed_federation_builders = yes
 		}
 	}
 }
 
 tr_est_administratum_finish = {
-	modifier = {	
+	modifier = {
 		country_government_civic_points_add = 1
 		ascension_perks_add = 1
 	}
@@ -88,7 +88,7 @@ tr_est_administratum_1 = {
 			factor = 1
 		}
 	}
-	
+
 	ai_weight = {
 		factor = 1000
 	}
@@ -98,15 +98,15 @@ tr_est_administratum_2 = {
 	possible = {
 		has_tradition = tr_est_administratum_1
 	}
-	
+
 	modifier = {
 		governor_skill_levels = 1
 	}
-	
+
 	on_enabled = {
 		every_pool_leader = {
 			owner = {
-				country_event = { 
+				country_event = {
 					id = est_administratum.1
 					scopes = {
 						from = prev
@@ -116,7 +116,7 @@ tr_est_administratum_2 = {
 		}
 		every_owned_leader = {
 			owner = {
-				country_event = { 
+				country_event = {
 					id = est_administratum.1
 					scopes = {
 						from = prev
@@ -143,7 +143,7 @@ tr_est_administratum_2 = {
 			factor = 1
 		}
 	}
-	
+
 	ai_weight = {
 		factor = 2000
 	}
@@ -171,16 +171,49 @@ tr_est_administratum_3 = {
 			factor = 1
 		}
 	}
-	
+
 	ai_weight = {
 		factor = 2000
 	}
 }
 
 tr_est_administratum_4 = {
-	modifier = {
-		planet_districts_cost_mult = -0.10
-		planet_districts_upkeep_mult = -0.10
+	on_enabled = {
+		every_owned_planet = {
+			if = {
+				limit = {
+					sector = {
+						exists = leader
+					}
+					has_upgraded_capital = yes
+				}
+				if = {
+					limit = {
+						owner = {
+							has_ethic = ethic_gestalt_consciousness
+						}
+					}
+					add_modifier = {
+						modifier = "mod_est_omnipresence_4"
+						days = -1
+					}
+				}
+				else = {
+					add_modifier = {
+						modifier = "mod_est_administratum_4"
+						days = -1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				Not = {
+					has_global_flag = est_administratum_4_picked_flag
+				}
+			}
+			set_global_flag = est_administratum_4_picked_flag
+		}
 	}
 
 	tradition_swap = {
@@ -207,9 +240,9 @@ tr_est_administratum_5 = {
 		has_tradition = tr_est_administratum_3
 		has_tradition = tr_est_administratum_4
 	}
-	
+
 	modifier = {
-		edict_length_mult = 0.30
+		edict_length_mult = 0.25
 	}
 
 	tradition_swap = {
@@ -223,6 +256,7 @@ tr_est_administratum_5 = {
 				has_authority = auth_machine_intelligence
 			}
 		}
+
 		weight = {
 			factor = 1
 		}
@@ -237,11 +271,12 @@ tr_est_administratum_5 = {
 			has_ethic = ethic_gestalt_consciousness
 			has_authority = auth_machine_intelligence
 		}
+
 		weight = {
 			factor = 1
 		}
 	}
-	
+
 	ai_weight = {
 		factor = 5000
 	}

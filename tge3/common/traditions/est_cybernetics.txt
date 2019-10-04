@@ -43,7 +43,7 @@ tr_est_cybernetics_adopt = {
 			est_is_machine_empire = yes
 		}	
 		modifier = {
-			country_admin_cap_add = 20
+			country_admin_cap_add = 10
 		}
 		weight = {factor =  1}
 	}
@@ -138,7 +138,26 @@ tr_est_cybernetics_finish = {
 			is_ai = no
 		}	
 		modifier = {	
-			planet_farmers_minerals_produces_add = 1
+			ascension_perks_add = 1
+		}
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		name = tr_est_biogenesis_finish_AI
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			Or = {
+				est_is_hive_mind = yes
+				has_ascension_perk = ap_evolutionary_mastery
+			}
+			is_ai = yes
+		}	
+		modifier = {	
+			country_food_produces_mult = 0.10
+			country_minerals_produces_mult = 0.10
 			ascension_perks_add = 1
 		}
 		weight = {factor =  1}
@@ -154,7 +173,7 @@ tr_est_cybernetics_finish = {
 		}	
 		modifier = {	
 			ascension_perks_add = 1
-			country_resource_max_energy_add = 100000
+			country_resource_max_energy_add = 50000
 		}	
 		weight = {factor =  1}
 	}
@@ -259,9 +278,31 @@ tr_est_cybernetics_2 = {
 	}
 
 	modifier = {
-		country_engineering_research_produces_mult = 0.05
-		country_physics_research_produces_mult = 0.05
-		country_society_research_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+	}
+	
+	tradition_swap = {
+		name = tr_est_cybernetics_2_robots
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			Not = {
+				has_ethic = ethic_gestalt_consciousness			
+				has_ascension_perk = ap_evolutionary_mastery
+				has_ascension_perk = ap_transcendence
+			}
+			est_uses_robots = yes
+			is_ai = no
+		}
+		modifier = {
+			pop_category_robot_engineering_research_produces_mult = 0.10
+			pop_category_robot_physics_research_produces_mult = 0.10
+			pop_category_robot_society_research_produces_mult = 0.10
+		}
+		weight = {factor =  1}
 	}
 	
 	tradition_swap = {
@@ -392,7 +433,7 @@ tr_est_cybernetics_3 = {
 			}
 		}	
 		modifier = {	
-			country_food_produces_mult = 0.20
+			country_food_produces_mult = 0.10
 		}
 		weight = {factor =  1}
 	}
@@ -406,7 +447,7 @@ tr_est_cybernetics_3 = {
 			est_is_machine_empire = yes
 		}	
 		modifier = {
-			planet_jobs_energy_produces_mult = 0.15
+			country_energy_produces_mult = 0.15
 		}
 		weight = {factor =  1}
 	}
@@ -489,7 +530,7 @@ tr_est_cybernetics_4 = {
 			est_is_hive_mind = yes
 		}	
 		modifier = {
-			pop_growth_speed = 0.20
+			pop_growth_speed = 0.10
 		}
 		weight = {factor =  1}
 	}
@@ -632,7 +673,7 @@ tr_est_cybernetics_5 = {
 			est_is_machine_empire = yes
 		}	
 		modifier = {
-			empire_size_penalty_mult = -0.10
+			empire_size_penalty_mult = -0.05
 		}
 		weight = {factor =  1}
 	}
@@ -646,8 +687,8 @@ tr_est_cybernetics_5 = {
 			has_ascension_perk = ap_transcendence
 		}	
 		modifier = {
-			ship_shield_mult = 0.15
-			weapon_type_energy_weapon_damage_mult = 0.15
+			ship_shield_mult = 0.10
+			weapon_type_energy_weapon_damage_mult = 0.10
 		}
 		weight = {factor =  1}
 	}

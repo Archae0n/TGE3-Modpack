@@ -230,25 +230,26 @@ tr_est_militarism_4 = {
 
 tr_est_militarism_5 = {
 	on_enabled = {
-		every_pool_leader = {
-			owner = {
-				country_event = { 
-					id = est_militarism.2
-					scopes = {
-						from = prev
-					}
-				}
-			}
-		}
 		every_owned_leader = {
-			owner = {
-				country_event = { 
-					id = est_militarism.2
-					scopes = {
-						from = prev
-					}
+			limit = {
+				Not = {
+					has_trait = leader_trait_admiral_est_militarism_5
 				}
+				leader_class = admiral
 			}
+			add_trait = leader_trait_admiral_est_militarism_5
+		}
+		every_pool_leader = {
+			limit = {
+				Not = {
+					has_trait = leader_trait_admiral_est_militarism_5
+				}
+				leader_class = admiral
+			}
+			add_trait = leader_trait_admiral_est_militarism_5
+		}	
+		country_event = {
+			id = est_militarism.3
 		}
 	}	
 
@@ -258,14 +259,40 @@ tr_est_militarism_5 = {
 	
 	tradition_swap = {
 		name = tr_est_might_5
-		inherit_effects = yes
+		inherit_effects = no
 		inherit_icon = no
 		inherit_name = no
 		trigger = {
 			has_ethic = ethic_gestalt_consciousness
 		}	
+		modifier = {
+			ship_experience_gain_mult = 0.25
+		}		
+		on_enabled = {
+			every_owned_leader = {
+				limit = {
+					Not = {
+						has_trait = leader_trait_admiral_est_might_5
+					}
+					leader_class = admiral 
+				}
+				add_trait = leader_trait_admiral_est_might_5	
+			}
+			every_pool_leader = {
+				limit = {
+					Not = {
+						has_trait = leader_trait_admiral_est_might_5
+					}
+					leader_class = admiral 
+				}
+				add_trait = leader_trait_admiral_est_might_5
+			}	
+			country_event = {
+				id = est_militarism.6
+			}
+		}	
 		weight = {
-			factor = 1
+			factor = 4
 		}
 	}
 		

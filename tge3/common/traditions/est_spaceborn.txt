@@ -94,8 +94,8 @@ tr_est_spaceborn_3 = {
 	}
 	
 	modifier = {
-		ship_speed_mult = 0.25
-		ship_interstellar_speed_mult = 0.25
+		ship_speed_mult = 0.15
+		ship_interstellar_speed_mult = 0.15
 	}
 	
 	ai_weight = {
@@ -110,27 +110,37 @@ tr_est_spaceborn_4 = {
 	
 	on_enabled = {
 		every_system_within_border = {
-			random_system_planet = {
-				limit = {
-					Or = {
-						is_planet_class = pc_b_star
-						is_planet_class = pc_a_star
-						is_planet_class = pc_f_star
-						is_planet_class = pc_g_star
-						is_planet_class = pc_k_star
-						is_planet_class = pc_m_star
-						is_planet_class = pc_m_giant_star
-						is_planet_class = pc_t_star
+			every_system_planet = {
+				if = {
+					limit = {
+						exists = owner
+						owner = {
+							has_tradition = tr_est_spaceborn_4			
+						}
+						Or = {
+							is_planet_class = pc_b_star
+							is_planet_class = pc_a_star
+							is_planet_class = pc_f_star
+							is_planet_class = pc_g_star
+							is_planet_class = pc_k_star
+							is_planet_class = pc_m_star
+							is_planet_class = pc_m_giant_star
+							is_planet_class = pc_t_star
+						}
+						has_resource = { 
+							type = energy
+							amount > 0 
+						}
 					}
-					has_resource = { 
-						type = energy
-						amount > 0 
-					}
-					Not = {
-						has_deposit = d_est_spaceborn_4_sun				
+					if = {
+						limit = {
+							Not = {
+								has_deposit = d_est_spaceborn_4_sun				
+							}
+						}
+						add_deposit = d_est_spaceborn_4_sun
 					}
 				}
-				add_deposit = d_est_spaceborn_4_sun
 			}
 		}
 	}
@@ -169,7 +179,7 @@ tr_est_spaceborn_5 = {
 		}
 
 		modifier = {
-			megastructure_build_speed_mult = 0.33
+			megastructure_build_speed_mult = 0.15
 			starbase_buildings_cost_mult = -0.20
 			starbase_building_build_speed_mult = 0.50
 		}
@@ -244,7 +254,7 @@ tr_est_spaceborn_5 = {
 			}
 		}
 		modifier = {
-			megastructure_build_speed_mult = 0.33
+			megastructure_build_speed_mult = 0.15
 		}
 
 		weight = {

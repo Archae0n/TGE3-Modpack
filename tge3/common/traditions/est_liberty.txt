@@ -1,7 +1,8 @@
 tr_est_liberty_adopt = {
 	modifier = {
-		pop_growth_from_immigration = 0.25
+		planet_amenities_mult = 0.10
 	}
+	
 	tradition_swap = {
 		name = tr_est_liberty_adopt_no_migration
 		inherit_effects = no
@@ -18,24 +19,7 @@ tr_est_liberty_adopt = {
 			}	
 		}	
 		modifier = {
-			trade_value_mult = 0.10
-		}
-		weight = {factor = 1 }
-	}
-	
-	tradition_swap = {
-		name = tr_est_liberty_adopt_slavery
-		inherit_effects = no
-		inherit_icon = yes
-		inherit_name = yes
-		trigger = {
-			Not = {
-				has_ethic = ethic_gestalt_consciousness	
-			}
-			has_policy_flag = slavery_allowed
-		}	
-		modifier = {
-			pop_growth_from_immigration = 0.25
+			pop_happiness = 0.05
 		}
 		weight = {factor = 1 }
 	}
@@ -54,6 +38,23 @@ tr_est_liberty_adopt = {
 				is_same_species = root
 				has_migration_control = yes
 			}	
+		}	
+		modifier = {
+			pop_happiness = 0.05
+		}
+		weight = {factor = 1 }
+	}
+	
+	tradition_swap = {
+		name = tr_est_liberty_adopt_slavery
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			Not = {
+				has_ethic = ethic_gestalt_consciousness	
+			}
+			has_policy_flag = slavery_allowed
 		}	
 		modifier = {
 			pop_happiness = 0.05
@@ -120,8 +121,30 @@ tr_est_liberty_adopt = {
 
 tr_est_liberty_finish = {
 	modifier = {
-		planet_jobs_specialist_upkeep_mult = -0.25
+		pop_growth_from_immigration = 0.20
+		pop_factions_influence_produces_mult = 0.15
 		ascension_perks_add = 1
+	}
+	
+	tradition_swap = {
+		name = tr_est_liberty_finish_no_migration
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			Not = {
+				has_ethic = ethic_gestalt_consciousness	
+			}
+			any_owned_pop = {
+				is_same_species = root
+				has_migration_control = yes
+			}
+		}	
+		modifier = {
+			trade_value_mult = 0.20
+			ascension_perks_add = 1
+		}
+		weight = {factor = 1 }
 	}
 	
 	tradition_swap = {
@@ -161,7 +184,7 @@ tr_est_liberty_1 = {
 			}
 		}	
 		modifier = {
-			pop_cat_slave_happiness = 0.20			
+			pop_cat_slave_happiness = 0.10			
 		}
 		weight = {factor =  1}
 	}

@@ -1,7 +1,888 @@
 tr_est_archivist_adopt = {
+	on_enabled = {
+		country_event = {
+			id = est_archivist.1
+		}
+	}
+	
+	tradition_swap = {
+		name = tr_est_archivist_adopt_particles_computing
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_particles
+			has_country_flag = flag_est_archivist_adopt_computing
+		}
+		modifier = {
+			category_particles_research_speed_mult = 0.15
+			category_computing_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
 
-	modifier = {
-		ship_anomaly_generation_chance_mult = 0.20
+	tradition_swap = {
+		name = tr_est_archivist_adopt_particles_field_manipulation
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_particles
+			has_country_flag = flag_est_archivist_adopt_field_manipulation
+		}
+		modifier = {
+			category_particles_research_speed_mult = 0.15
+			category_field_manipulation_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_particles_voidcraft
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_particles
+			has_country_flag = flag_est_archivist_adopt_voidcraft
+		}
+		modifier = {
+			category_particles_research_speed_mult = 0.15
+			category_voidcraft_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_particles_biology
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_particles
+			has_country_flag = flag_est_archivist_adopt_biology
+		}
+		modifier = {
+			category_particles_research_speed_mult = 0.15
+			category_biology_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_particles_statecraft
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_particles
+			has_country_flag = flag_est_archivist_adopt_statecraft
+		}
+		modifier = {
+			category_particles_research_speed_mult = 0.15
+			category_statecraft_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_particles_new_worlds
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_particles
+			has_country_flag = flag_est_archivist_adopt_new_worlds
+		}
+		modifier = {
+			category_particles_research_speed_mult = 0.15
+			category_new_worlds_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_particles_military_theory
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_particles
+			has_country_flag = flag_est_archivist_adopt_military_theory
+		}
+		modifier = {
+			category_particles_research_speed_mult = 0.15
+			category_military_theory_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_particles_materials
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_particles
+			has_country_flag = flag_est_archivist_adopt_materials
+		}
+		modifier = {
+			category_particles_research_speed_mult = 0.15
+			category_materials_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_particles_industry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_particles
+			has_country_flag = flag_est_archivist_adopt_industry
+		}
+		modifier = {
+			category_particles_research_speed_mult = 0.15
+			category_industry_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_particles_rocketry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_particles
+			has_country_flag = flag_est_archivist_adopt_rocketry
+		}
+		modifier = {
+			category_particles_research_speed_mult = 0.15
+			category_propulsion_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_computing_field_manipulation
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_computing
+			has_country_flag = flag_est_archivist_adopt_field_manipulation
+		}
+		modifier = {
+			category_computing_research_speed_mult = 0.15
+			category_field_manipulation_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_computing_voidcraft
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_computing
+			has_country_flag = flag_est_archivist_adopt_voidcraft
+		}
+		modifier = {
+			category_computing_research_speed_mult = 0.15
+			category_voidcraft_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_computing_biology
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_computing
+			has_country_flag = flag_est_archivist_adopt_biology
+		}
+		modifier = {
+			category_computing_research_speed_mult = 0.15
+			category_biology_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_computing_statecraft
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_computing
+			has_country_flag = flag_est_archivist_adopt_statecraft
+		}
+		modifier = {
+			category_computing_research_speed_mult = 0.15
+			category_statecraft_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_computing_new_worlds
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_computing
+			has_country_flag = flag_est_archivist_adopt_new_worlds
+		}
+		modifier = {
+			category_computing_research_speed_mult = 0.15
+			category_new_worlds_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_computing_military_theory
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_computing
+			has_country_flag = flag_est_archivist_adopt_military_theory
+		}
+		modifier = {
+			category_computing_research_speed_mult = 0.15
+			category_military_theory_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_computing_materials
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_computing
+			has_country_flag = flag_est_archivist_adopt_materials
+		}
+		modifier = {
+			category_computing_research_speed_mult = 0.15
+			category_materials_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_computing_industry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_computing
+			has_country_flag = flag_est_archivist_adopt_industry
+		}
+		modifier = {
+			category_computing_research_speed_mult = 0.15
+			category_industry_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_computing_rocketry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_computing
+			has_country_flag = flag_est_archivist_adopt_rocketry
+		}
+		modifier = {
+			category_computing_research_speed_mult = 0.15
+			category_propulsion_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_field_manipulation_voidcraft
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_field_manipulation
+			has_country_flag = flag_est_archivist_adopt_voidcraft
+		}
+		modifier = {
+			category_field_manipulation_research_speed_mult = 0.15
+			category_voidcraft_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_field_manipulation_biology
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_field_manipulation
+			has_country_flag = flag_est_archivist_adopt_biology
+		}
+		modifier = {
+			category_field_manipulation_research_speed_mult = 0.15
+			category_biology_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_field_manipulation_statecraft
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_field_manipulation
+			has_country_flag = flag_est_archivist_adopt_statecraft
+		}
+		modifier = {
+			category_field_manipulation_research_speed_mult = 0.15
+			category_statecraft_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_field_manipulation_new_worlds
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_field_manipulation
+			has_country_flag = flag_est_archivist_adopt_new_worlds
+		}
+		modifier = {
+			category_field_manipulation_research_speed_mult = 0.15
+			category_new_worlds_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_field_manipulation_military_theory
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_field_manipulation
+			has_country_flag = flag_est_archivist_adopt_military_theory
+		}
+		modifier = {
+			category_field_manipulation_research_speed_mult = 0.15
+			category_military_theory_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_field_manipulation_materials
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_field_manipulation
+			has_country_flag = flag_est_archivist_adopt_materials
+		}
+		modifier = {
+			category_field_manipulation_research_speed_mult = 0.15
+			category_materials_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_field_manipulation_industry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_field_manipulation
+			has_country_flag = flag_est_archivist_adopt_industry
+		}
+		modifier = {
+			category_field_manipulation_research_speed_mult = 0.15
+			category_industry_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_field_manipulation_rocketry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_field_manipulation
+			has_country_flag = flag_est_archivist_adopt_rocketry
+		}
+		modifier = {
+			category_field_manipulation_research_speed_mult = 0.15
+			category_propulsion_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_voidcraft_biology
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_voidcraft
+			has_country_flag = flag_est_archivist_adopt_biology
+		}
+		modifier = {
+			category_voidcraft_research_speed_mult = 0.15
+			category_biology_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_voidcraft_statecraft
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_voidcraft
+			has_country_flag = flag_est_archivist_adopt_statecraft
+		}
+		modifier = {
+			category_voidcraft_research_speed_mult = 0.15
+			category_statecraft_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_voidcraft_new_worlds
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_voidcraft
+			has_country_flag = flag_est_archivist_adopt_new_worlds
+		}
+		modifier = {
+			category_voidcraft_research_speed_mult = 0.15
+			category_new_worlds_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_voidcraft_military_theory
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_voidcraft
+			has_country_flag = flag_est_archivist_adopt_military_theory
+		}
+		modifier = {
+			category_voidcraft_research_speed_mult = 0.15
+			category_military_theory_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_voidcraft_materials
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_voidcraft
+			has_country_flag = flag_est_archivist_adopt_materials
+		}
+		modifier = {
+			category_voidcraft_research_speed_mult = 0.15
+			category_materials_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_voidcraft_industry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_voidcraft
+			has_country_flag = flag_est_archivist_adopt_industry
+		}
+		modifier = {
+			category_voidcraft_research_speed_mult = 0.15
+			category_industry_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_voidcraft_rocketry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_voidcraft
+			has_country_flag = flag_est_archivist_adopt_rocketry
+		}
+		modifier = {
+			category_voidcraft_research_speed_mult = 0.15
+			category_propulsion_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_biology_statecraft
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_biology
+			has_country_flag = flag_est_archivist_adopt_statecraft
+		}
+		modifier = {
+			category_biology_research_speed_mult = 0.15
+			category_statecraft_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_biology_new_worlds
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_biology
+			has_country_flag = flag_est_archivist_adopt_new_worlds
+		}
+		modifier = {
+			category_biology_research_speed_mult = 0.15
+			category_new_worlds_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_biology_military_theory
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_biology
+			has_country_flag = flag_est_archivist_adopt_military_theory
+		}
+		modifier = {
+			category_biology_research_speed_mult = 0.15
+			category_military_theory_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_biology_materials
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_biology
+			has_country_flag = flag_est_archivist_adopt_materials
+		}
+		modifier = {
+			category_biology_research_speed_mult = 0.15
+			category_materials_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_biology_industry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_biology
+			has_country_flag = flag_est_archivist_adopt_industry
+		}
+		modifier = {
+			category_biology_research_speed_mult = 0.15
+			category_industry_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_biology_rocketry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_biology
+			has_country_flag = flag_est_archivist_adopt_rocketry
+		}
+		modifier = {
+			category_biology_research_speed_mult = 0.15
+			category_propulsion_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_statecraft_new_worlds
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_statecraft
+			has_country_flag = flag_est_archivist_adopt_new_worlds
+		}
+		modifier = {
+			category_statecraft_research_speed_mult = 0.15
+			category_new_worlds_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_statecraft_military_theory
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_statecraft
+			has_country_flag = flag_est_archivist_adopt_military_theory
+		}
+		modifier = {
+			category_statecraft_research_speed_mult = 0.15
+			category_military_theory_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_statecraft_materials
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_statecraft
+			has_country_flag = flag_est_archivist_adopt_materials
+		}
+		modifier = {
+			category_statecraft_research_speed_mult = 0.15
+			category_materials_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_statecraft_industry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_statecraft
+			has_country_flag = flag_est_archivist_adopt_industry
+		}
+		modifier = {
+			category_statecraft_research_speed_mult = 0.15
+			category_industry_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_statecraft_rocketry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_statecraft
+			has_country_flag = flag_est_archivist_adopt_rocketry
+		}
+		modifier = {
+			category_statecraft_research_speed_mult = 0.15
+			category_propulsion_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_new_worlds_military_theory
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_new_worlds
+			has_country_flag = flag_est_archivist_adopt_military_theory
+		}
+		modifier = {
+			category_new_worlds_research_speed_mult = 0.15
+			category_military_theory_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_new_worlds_materials
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_new_worlds
+			has_country_flag = flag_est_archivist_adopt_materials
+		}
+		modifier = {
+			category_new_worlds_research_speed_mult = 0.15
+			category_materials_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_new_worlds_industry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_new_worlds
+			has_country_flag = flag_est_archivist_adopt_industry
+		}
+		modifier = {
+			category_new_worlds_research_speed_mult = 0.15
+			category_industry_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_new_worlds_rocketry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_new_worlds
+			has_country_flag = flag_est_archivist_adopt_rocketry
+		}
+		modifier = {
+			category_new_worlds_research_speed_mult = 0.15
+			category_propulsion_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_military_theory_materials
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_military_theory
+			has_country_flag = flag_est_archivist_adopt_materials
+		}
+		modifier = {
+			category_military_theory_research_speed_mult = 0.15
+			category_materials_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_military_theory_industry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_military_theory
+			has_country_flag = flag_est_archivist_adopt_industry
+		}
+		modifier = {
+			category_military_theory_research_speed_mult = 0.15
+			category_industry_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_military_theory_rocketry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_military_theory
+			has_country_flag = flag_est_archivist_adopt_rocketry
+		}
+		modifier = {
+			category_military_theory_research_speed_mult = 0.15
+			category_propulsion_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_materials_industry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_materials
+			has_country_flag = flag_est_archivist_adopt_industry
+		}
+		modifier = {
+			category_materials_research_speed_mult = 0.15
+			category_industry_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_materials_rocketry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_materials
+			has_country_flag = flag_est_archivist_adopt_rocketry
+		}
+		modifier = {
+			category_materials_research_speed_mult = 0.15
+			category_propulsion_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
+		name = tr_est_archivist_adopt_industry_rocketry
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = flag_est_archivist_adopt_industry
+			has_country_flag = flag_est_archivist_adopt_rocketry
+		}
+		modifier = {
+			category_industry_research_speed_mult = 0.15
+			category_propulsion_research_speed_mult = 0.15
+		}
+		weight = { factor = 1 }
 	}
 	
 	ai_weight = {
@@ -35,14 +916,9 @@ tr_est_archivist_1 = {
 	on_enabled = {
 		every_owned_planet = {
 			planet_event = {
-				id = est_archivist.1
+				id = est_archivist.2
 			}
 		}
-	}
-
-	modifier = {
-		station_observers_unity_produces_add = 5
-		station_observer_missions_society_research_produces_mult = 0.50
 	}
 	
 	tradition_swap = {
@@ -733,6 +1609,10 @@ tr_est_archivist_4 = {
 	possible = {
 		has_tradition = tr_est_archivist_1
 		has_tradition = tr_est_archivist_2
+	}
+	
+	modifier = {
+		ship_anomaly_generation_chance_mult = 0.10
 	}
 
 	ai_weight = {
@@ -2032,7 +2912,7 @@ tr_est_archivist_5 = {
 				value = 4
 			}
 			country_event = {
-				id = est_archivist.8
+				id = est_archivist.9
 			}
 		}
 	}

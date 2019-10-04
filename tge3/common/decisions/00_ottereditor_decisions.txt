@@ -1,0 +1,72 @@
+#decision_ottereditor = {
+#	
+#	resources = {
+#		category = decisions
+#		cost = {
+#			influence = 0
+#		}
+#	}
+#
+#	potential = {
+#		always=yes
+#		FROM = { is_ai = no	}
+#	}
+#			
+#	allow = {
+#		always=yes
+#		FROM = { is_ai = no	}
+#	}		
+#	
+#	effect = { 
+#	 	Root = {
+#			set_planet_flag = decision_ottereditor
+#		}
+#
+#		from = { 
+#			country_event = { id = ottereditor.intd } 
+#		}
+#		
+#	}
+#		
+#	ai_weight = {
+#		weight = 0
+#	}
+#}
+
+#decision_test3 = {
+#	
+#	resources = {
+#		category = decisions
+#		cost = {
+#			influence = 0
+#		}
+#	}
+#
+#	potential = {
+#		space_owner = {
+#			not = { 
+#				is_same_value = from 
+#			}
+#		}
+#	}
+#			
+#	allow = {
+#		always=yes
+#		FROM = { is_ai = no	}
+#	}		
+#	
+#	effect = { 
+#	 	Root = {
+#			set_planet_flag = decision_ottereditor
+#		}
+#
+#		from = { 
+#			country_event = { id = ottereditor.intd } 
+#		}
+#		
+#	}
+#		
+#	ai_weight = {
+#		weight = 0
+#	}
+#}
