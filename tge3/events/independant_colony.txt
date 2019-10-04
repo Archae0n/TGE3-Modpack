@@ -1,0 +1,4042 @@
+#####
+# Needle_Fingers
+#####
+
+# nivlac country creation event is on line 16743 of distant stars events
+# We want to create an independant nation on a trigger that has a negative modifier to the originating nations
+# we want the triggering nation to generate an independant colony of their same species or a species they have
+# we want this to occur randomly, after they reach 30 or 40 pops, after 20 years have passed and then randomly thereafter
+# to start we want this to only occur on planets, and to only occur on planets near the triggerer
+# we do not want rogue machines or gestalts yet
+# we do not want custom space stations yet
+# copy of nivlac country generation and test of randomisation
+# locate a timed/pop trigger and apply it
+# also determine the lcoation of a machine uprising event and see what it does
+
+# todo make machine and syncratic civics spawn with pops of thos types
+# randomise pop spawns
+# todo create independant machine empire link
+# todo create hive mind sentience split
+# create an option for yes or no for you to undergo random migration
+# create the ramshackle habitats and add them for useage
+
+namespace = independant_colony
+
+# 12 bands
+
+# Spawning an empire attempts
+# create 5 triggers pop value 30 70 120 180 250 each one will trigger and set flag
+# first trigger is small, and these countries can have that trigger too doubtful that 300 wil even fire but eh
+# changed to 20 60 120 200 300 set the first one to go off immedaitely as i want a colony to appear within the first 10-50 years
+# set to 20 as to make the minor colonies build up before they trigger a migration
+# seems like this will work better on larger maps with fewer starting empires
+# keeping ramshackle habitats out for the time being until bugs are dealt with
+# need to find out how to select a random pop species in the civ rather than just the owner
+# when the previous is worked out make robot pops form a machine consciousness
+
+country_event = {
+    id = independant_colony.0025
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        country_event = { id = independant_colony.0003 days = 1 }
+        country_event = { id = independant_colony.0013 days = 2 }
+#            country_event = { id = independant_colony.0024 days = 3 }
+        country_event = { id = independant_colony.0014 days = 4 }
+        country_event = { id = independant_colony.0015 days = 5 }
+#            country_event = { id = independant_colony.0026 days = 6 }
+        country_event = { id = independant_colony.0016 days = 7 }
+        country_event = { id = independant_colony.0017 days = 8 }
+#            country_event = { id = independant_colony.0027 days = 9 }
+        country_event = { id = independant_colony.0018 days = 10 }
+        country_event = { id = independant_colony.0019 days = 11 }
+#             country_event = { id = independant_colony.0028 days = 12 }
+        country_event = { id = independant_colony.0020 days = 13 }
+        country_event = { id = independant_colony.0021 days = 14 }
+#            country_event = { id = independant_colony.0029 days = 15 }
+        country_event = { id = independant_colony.0022 days = 16 }
+        country_event = { id = independant_colony.0023 days = 17 }
+#            country_event = { id = independant_colony.0030 days = 18 }
+    }
+}
+
+country_event = {
+    id = independant_colony.0001
+    hide_window = yes
+    trigger = {
+        num_pops > 35
+        is_country_type = default
+        NOR = {
+            has_ethic = ethic_gestalt_consciousness
+            has_country_flag = triggered_first_migration
+        }
+    }
+    # Randomly choose time scale 30 years from first trigger is mean, shortest 10 max 50 50 years proven too long, changed to intervals of 5 with one less year each fragment after
+    immediate = { 
+        set_country_flag = triggered_first_migration
+        random_list = {
+            0 = { country_event = {         # debug set to 1 and others 0 to test
+                id = independant_colony.0025
+                days = 2
+                random = 2
+            }}
+            1 = { country_event = {
+                id = independant_colony.0025
+                days = 1800
+                random = 900
+            }}
+            2 = { country_event = {
+                id = independant_colony.0025
+                days = 3600
+                random = 1800
+            }}
+            3 = { country_event = {
+                id = independant_colony.0025
+                days = 5400
+                random = 2700
+            }}
+            2 = { country_event = {
+                id = independant_colony.0025
+                days = 7200
+                random = 3600
+            }}
+            1 = { country_event = {
+                id = independant_colony.0025
+                days = 9000
+                random = 4500
+            }}
+        }
+    }
+}
+
+# event 2
+
+country_event = {
+    id = independant_colony.0002
+    hide_window = yes
+    trigger = {
+        num_pops > 100
+        is_country_type = default
+        NOR = {
+            has_ethic = ethic_gestalt_consciousness
+            has_country_flag = triggered_second_migration
+        }
+    }
+    # Randomly choose time scale 24 years from first trigger is mean, shortest 10 max 50
+    immediate = { 
+        set_country_flag = triggered_second_migration
+        random_list = {
+            1 = { country_event = {
+                id = independant_colony.0025
+                days = 1800
+                random = 900
+            }}
+            2 = { country_event = {
+                id = independant_colony.0025
+                days = 3600
+                random = 1800
+            }}
+            3 = { country_event = {
+                id = independant_colony.0025
+                days = 5400
+                random = 2700
+            }}
+            2 = { country_event = {
+                id = independant_colony.0025
+                days = 7200
+                random = 3600
+            }}
+            1 = { country_event = {
+                id = independant_colony.0025
+                days = 9000
+                random = 4500
+            }}
+        }
+    }
+}
+
+# event 3
+
+country_event = {
+    id = independant_colony.0005
+    hide_window = yes
+    trigger = {
+        num_pops > 200
+        is_country_type = default
+        NOR = {
+            has_ethic = ethic_gestalt_consciousness
+            has_country_flag = triggered_third_migration
+        }
+    }
+    # Randomly choose time scale 18 years from first trigger is mean, shortest 10 max 50
+    immediate = { 
+        set_country_flag = triggered_third_migration
+        random_list = {
+            1 = { country_event = {
+                id = independant_colony.0025
+                days = 1800
+                random = 900
+            }}
+            2 = { country_event = {
+                id = independant_colony.0025
+                days = 3600
+                random = 1800
+            }}
+            3 = { country_event = {
+                id = independant_colony.0025
+                days = 5400
+                random = 2700
+            }}
+            2 = { country_event = {
+                id = independant_colony.0025
+                days = 7200
+                random = 3600
+            }}
+            1 = { country_event = {
+                id = independant_colony.0025
+                days = 9000
+                random = 4500
+            }}
+        }
+    }
+}
+
+# event 4
+
+country_event = {
+    id = independant_colony.0006
+    hide_window = yes
+    trigger = {
+        num_pops > 400
+        is_country_type = default
+        NOR = {
+            has_ethic = ethic_gestalt_consciousness
+            has_country_flag = triggered_fourth_migration
+        }
+    }
+    # Randomly choose time scale 12 years from first trigger is mean, shortest 10 max 50
+    immediate = { 
+        set_country_flag = triggered_fourth_migration
+        random_list = {
+            1 = { country_event = {
+                id = independant_colony.0025
+                days = 1800
+                random = 900
+            }}
+            2 = { country_event = {
+                id = independant_colony.0025
+                days = 3600
+                random = 1800
+            }}
+            3 = { country_event = {
+                id = independant_colony.0025
+                days = 5400
+                random = 2700
+            }}
+            2 = { country_event = {
+                id = independant_colony.0025
+                days = 7200
+                random = 3600
+            }}
+            1 = { country_event = {
+                id = independant_colony.0025
+                days = 9000
+                random = 4500
+            }}
+        }
+    }
+}
+
+# event 5
+
+#country_event = {
+#    id = independant_colony.0007
+#    hide_window = yes
+#    trigger = {
+#       num_pops > 250
+#       is_country_type = default
+#        NOR = {
+#            has_ethic = ethic_gestalt_consciousness
+#            has_country_flag = triggered_fifth_migration
+#        }
+#    }
+#    # Randomly choose time scale 6 years from first trigger is mean, shortest 10 max 50
+#    immediate = { 
+#        set_country_flag = triggered_fifth_migration
+#        random_list = {
+#            1 = { country_event = {
+#                id = independant_colony.0025
+#                days = 360
+#                random = 180
+#            }}
+#            2 = { country_event = {
+#                id = independant_colony.0025
+#                days = 720
+#                random = 360
+#            }}
+#            3 = { country_event = {
+#                id = independant_colony.0025
+#                days = 1080
+#                random = 540
+#            }}
+#            2 = { country_event = {
+#                id = independant_colony.0025
+#                days = 1440
+#                random = 720
+#            }}
+#            1 = { country_event = {
+#                id = independant_colony.0025
+#                days = 1800
+#                random = 900
+#            }}
+#       }
+#   }
+#}
+
+
+# Trigger for the independant Spawning
+
+# twelve bands with intervals of 5 could not get if statements to work so cascading limits will do.
+
+country_event = {
+    id = independant_colony.0003
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+                    remove_country_flag = first_band
+                    remove_country_flag = second_band
+                    remove_country_flag = first_station_band
+                    remove_country_flag = third_band
+                    remove_country_flag = fourth_band
+                    remove_country_flag = fifth_band
+                    remove_country_flag = sixth_band
+                    remove_country_flag = seventh_band
+                    remove_country_flag = eigth_band
+                    remove_country_flag = ninth_band
+                    remove_country_flag = tenth_band
+                    remove_country_flag = eleventh_band
+        save_global_event_target_as = independant_origin_civ
+        owner_species = { save_global_event_target_as = independant_origin_species }
+                                                closest_system = {
+                        random_planet = {
+            limit = {
+
+                is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+                distance = {
+                    source = root.owner.capital_scope
+					max_jumps <= 5
+					min_jumps >= 1
+                }
+                solar_system = {
+                    NOT = { exists = starbase }
+                }
+            }
+                        save_global_event_target_as = independant_one_planet
+                                                set_planet_flag = independant_target
+                                                event_target:independant_origin_civ = {
+                                                                                                    set_country_flag = first_band
+                                                }
+    create_country = {
+            name = random
+            authority = random
+            civics = random
+            species = event_target:independant_origin_species
+            ignore_initial_colony_error = yes
+            ethos = random
+            flag = random
+            type = default
+            effect = {
+                save_global_event_target_as = independant_colony_empire
+                add_resource = { minerals = 10000 }
+                add_resource = { energy = 10000 }
+                add_resource = { food = 10000 }
+                add_resource = { influence = 10 }
+                add_resource = { consumer_goods = 3000 }
+				add_resource = { alloys = 1000 }
+                set_graphical_culture = event_target:independant_origin_civ
+            }
+        }
+        event_target:independant_one_planet = {
+            solar_system = {
+                create_starbase = {
+                    size = starbase_outpost
+                    owner = event_target:independant_colony_empire
+                }
+            }
+            set_owner = event_target:independant_colony_empire
+            set_capital = yes
+            clear_blockers = yes
+            solar_system = {
+                every_system_planet = {
+                    surveyed = {
+                        set_surveyed = yes
+                        surveyor = root.owner
+                    }
+                }
+            }
+            if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_mechanists } }
+                           create_species = {
+                    name = "Robot"
+                    class = ROBOT
+                    portrait = "default_robot"
+                    namelist = "AI"
+                    traits = {
+                        trait = trait_mechanical
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = mechanist_spawn_robots
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 8
+                create_pop = {
+                    species = event_target:mechanist_spawn_robots
+                }
+            }
+            add_building = building_robot_assembly_plant
+            }
+            else_if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_syncretic_evolution } }
+                           create_species = {
+                    name = random
+                    class = random
+                    portrait = random
+                    namelist = random
+                    traits = {
+                        trait = trait_presapient_proles
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = syncretic_spawn_pops
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 12
+                create_pop = {
+                    species = event_target:syncretic_spawn_pops
+                }
+            }
+            }                
+            else = {
+                random_list = {
+                    1 = {
+                                        while = {
+                    count = 5
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 6
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 7
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 8
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 9
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        1 = {
+                                        while = {
+                    count = 10
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                }
+            }
+            add_district = district_city
+			add_district = district_farming
+			add_district = district_mining
+			add_district = district_generator
+			add_building = building_capital
+			add_building = building_foundry_1
+			while = {				count = 2
+				create_army = {
+					name = random
+					owner = event_target:independant_colony_empire
+					species = event_target:independant_origin_species
+					type = defense_army
+                }
+                
+            }
+        }
+        event_target:independant_colony_empire = {
+            establish_communications_no_message = root
+        }
+        last_created_country = {
+            country_event = { id = independant_colony.0004 }
+        }
+                        }
+            }          
+    }  
+}
+
+
+# seperated out into range band triggers the triggers in the subsequent events are neccesary for the event to function as required
+
+
+country_event = {
+        id = independant_colony.0013
+hide_window = yes
+    is_triggered_only = yes
+    	trigger = {
+            NOR = { has_country_flag = first_band }
+		any_system = {
+			any_system_planet = {
+				is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+				distance = {
+					source = root.owner.capital_scope
+					max_jumps <= 10
+					min_jumps >= 6
+				}
+				solar_system = {
+					NOT = { exists = starbase }
+				}
+			}
+		}
+	}
+    immediate = {
+      closest_system = {
+                        random_planet = {
+            limit = {
+                is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+                distance = {
+                    source = root.owner.capital_scope
+					max_jumps <= 10
+					min_jumps >= 6
+                }
+                solar_system = {
+                    NOT = { exists = starbase }
+                }
+            }
+                        save_global_event_target_as = independant_one_planet
+                                                set_planet_flag = independant_target
+                                                                                                event_target:independant_origin_civ = {
+                                                                                                    set_country_flag = second_band
+                                                }
+    create_country = {
+            name = random
+            authority = random
+            civics = random
+            species = event_target:independant_origin_species
+            ignore_initial_colony_error = yes
+            ethos = random
+            flag = random
+            type = default
+            effect = {
+                save_global_event_target_as = independant_colony_empire
+                add_resource = { minerals = 10000 }
+                add_resource = { energy = 10000 }
+                add_resource = { food = 10000 }
+                add_resource = { influence = 10 }
+                add_resource = { consumer_goods = 3000 }
+				add_resource = { alloys = 1000 }
+                set_graphical_culture = event_target:independant_origin_civ
+            }
+        }
+        event_target:independant_one_planet = {
+            solar_system = {
+                create_starbase = {
+                    size = starbase_outpost
+                    owner = event_target:independant_colony_empire
+                }
+            }
+            set_owner = event_target:independant_colony_empire
+            set_capital = yes
+            clear_blockers = yes
+            solar_system = {
+                every_system_planet = {
+                    surveyed = {
+                        set_surveyed = yes
+                        surveyor = root.owner
+                    }
+                }
+            }
+             if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_mechanists } }
+                           create_species = {
+                    name = "Robot"
+                    class = ROBOT
+                    portrait = "default_robot"
+                    namelist = "AI"
+                    traits = {
+                        trait = trait_mechanical
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = mechanist_spawn_robots
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 8
+                create_pop = {
+                    species = event_target:mechanist_spawn_robots
+                }
+            }
+            add_building = building_robot_assembly_plant
+            }
+            else_if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_syncretic_evolution } }
+                           create_species = {
+                    name = random
+                    class = random
+                    portrait = random
+                    namelist = random
+                    traits = {
+                        trait = trait_presapient_proles
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = syncretic_spawn_pops
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 12
+                create_pop = {
+                    species = event_target:syncretic_spawn_pops
+                }
+            }
+            }                
+            else = {
+                random_list = {
+                    1 = {
+                                        while = {
+                    count = 5
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 6
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 7
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 8
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 9
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        1 = {
+                                        while = {
+                    count = 10
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                }
+            }
+            add_district = district_city
+			add_district = district_farming
+			add_district = district_mining
+			add_district = district_generator
+			add_building = building_capital
+			add_building = building_foundry_1
+			while = {				count = 2
+				create_army = {
+					name = random
+					owner = event_target:independant_colony_empire
+					species = event_target:independant_origin_species
+					type = defense_army
+                }
+                
+            }
+        }
+        event_target:independant_colony_empire = {
+            establish_communications_no_message = root
+        }
+        last_created_country = {
+            country_event = { id = independant_colony.0004 }
+        }
+                        }
+            }
+    }
+}
+
+country_event = {
+        id = independant_colony.0014
+hide_window = yes
+    is_triggered_only = yes
+    	trigger = {
+            NOR = { has_country_flag = first_band
+            has_country_flag = second_band 
+                      has_country_flag = first_station_band
+            }
+		any_system = {
+			any_system_planet = {
+				is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+				distance = {
+					source = root.owner.capital_scope
+					max_jumps <= 15
+					min_jumps >= 11
+				}
+				solar_system = {
+					NOT = { exists = starbase }
+				}
+			}
+		}
+	}
+    immediate = {
+      closest_system = {
+                        random_planet = {
+            limit = {
+                is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+                distance = {
+                    source = root.owner.capital_scope
+					max_jumps <= 15
+					min_jumps >= 11
+                }
+                solar_system = {
+                    NOT = { exists = starbase }
+                }
+            }
+                        save_global_event_target_as = independant_one_planet
+                                                set_planet_flag = independant_target
+                                                                                                event_target:independant_origin_civ = {
+                                                                                                    set_country_flag = third_band
+                                                }
+    create_country = {
+            name = random
+            authority = random
+            civics = random
+            species = event_target:independant_origin_species
+            ignore_initial_colony_error = yes
+            ethos = random
+            flag = random
+            type = default
+            effect = {
+                save_global_event_target_as = independant_colony_empire
+                add_resource = { minerals = 10000 }
+                add_resource = { energy = 10000 }
+                add_resource = { food = 10000 }
+                add_resource = { influence = 10 }
+                add_resource = { consumer_goods = 3000 }
+				add_resource = { alloys = 1000 }
+                set_graphical_culture = event_target:independant_origin_civ
+            }
+        }
+        event_target:independant_one_planet = {
+            solar_system = {
+                create_starbase = {
+                    size = starbase_outpost
+                    owner = event_target:independant_colony_empire
+                }
+            }
+            set_owner = event_target:independant_colony_empire
+            set_capital = yes
+            clear_blockers = yes
+            solar_system = {
+                every_system_planet = {
+                    surveyed = {
+                        set_surveyed = yes
+                        surveyor = root.owner
+                    }
+                }
+            }
+            if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_mechanists } }
+                           create_species = {
+                    name = "Robot"
+                    class = ROBOT
+                    portrait = "default_robot"
+                    namelist = "AI"
+                    traits = {
+                        trait = trait_mechanical
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = mechanist_spawn_robots
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 8
+                create_pop = {
+                    species = event_target:mechanist_spawn_robots
+                }
+            }
+            add_building = building_robot_assembly_plant
+            }
+            else_if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_syncretic_evolution } }
+                           create_species = {
+                    name = random
+                    class = random
+                    portrait = random
+                    namelist = random
+                    traits = {
+                        trait = trait_presapient_proles
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = syncretic_spawn_pops
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 12
+                create_pop = {
+                    species = event_target:syncretic_spawn_pops
+                }
+            }
+            }                
+            else = {
+                random_list = {
+                    1 = {
+                                        while = {
+                    count = 5
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 6
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 7
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 8
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 9
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        1 = {
+                                        while = {
+                    count = 10
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                }
+            }
+            add_district = district_city
+			add_district = district_farming
+			add_district = district_mining
+			add_district = district_generator
+			add_building = building_capital
+			add_building = building_foundry_1
+			while = {				count = 2
+				create_army = {
+					name = random
+					owner = event_target:independant_colony_empire
+					species = event_target:independant_origin_species
+					type = defense_army
+                }
+                
+            }
+        }
+        event_target:independant_colony_empire = {
+            establish_communications_no_message = root
+        }
+        last_created_country = {
+            country_event = { id = independant_colony.0004 }
+        }
+                        }
+            }
+    }
+}
+
+country_event = {
+        id = independant_colony.0015
+hide_window = yes
+    is_triggered_only = yes
+    	trigger = {
+            NOR = { has_country_flag = first_band
+            has_country_flag = second_band
+            has_country_flag = third_band 
+                                  has_country_flag = first_station_band
+                                  }
+		any_system = {
+			any_system_planet = {
+				is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+				distance = {
+					source = root.owner.capital_scope
+					max_jumps <= 20
+					min_jumps >= 16
+				}
+				solar_system = {
+					NOT = { exists = starbase }
+				}
+			}
+		}
+	}
+    immediate = {
+      closest_system = {
+                        random_planet = {
+            limit = {
+                is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                 NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+                distance = {
+                    source = root.owner.capital_scope
+					max_jumps <= 20
+					min_jumps >= 16
+                }
+                solar_system = {
+                    NOT = { exists = starbase }
+                }
+            }
+                        save_global_event_target_as = independant_one_planet
+                                                set_planet_flag = independant_target
+                                                                                                event_target:independant_origin_civ = {
+                                                                                                    set_country_flag = fourth_band
+                                                }
+    create_country = {
+            name = random
+            authority = random
+            civics = random
+            species = event_target:independant_origin_species
+            ignore_initial_colony_error = yes
+            ethos = random
+            flag = random
+            type = default
+            effect = {
+                save_global_event_target_as = independant_colony_empire
+                add_resource = { minerals = 10000 }
+                add_resource = { energy = 10000 }
+                add_resource = { food = 10000 }
+                add_resource = { influence = 10 }
+                add_resource = { consumer_goods = 3000 }
+				add_resource = { alloys = 1000 }
+                set_graphical_culture = event_target:independant_origin_civ
+            }
+        }
+        event_target:independant_one_planet = {
+            solar_system = {
+                create_starbase = {
+                    size = starbase_outpost
+                    owner = event_target:independant_colony_empire
+                }
+            }
+            set_owner = event_target:independant_colony_empire
+            set_capital = yes
+            clear_blockers = yes
+            solar_system = {
+                every_system_planet = {
+                    surveyed = {
+                        set_surveyed = yes
+                        surveyor = root.owner
+                    }
+                }
+            }
+            if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_mechanists } }
+                           create_species = {
+                    name = "Robot"
+                    class = ROBOT
+                    portrait = "default_robot"
+                    namelist = "AI"
+                    traits = {
+                        trait = trait_mechanical
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = mechanist_spawn_robots
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 8
+                create_pop = {
+                    species = event_target:mechanist_spawn_robots
+                }
+            }
+            add_building = building_robot_assembly_plant
+            }
+            else_if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_syncretic_evolution } }
+                           create_species = {
+                    name = random
+                    class = random
+                    portrait = random
+                    namelist = random
+                    traits = {
+                        trait = trait_presapient_proles
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = syncretic_spawn_pops
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 12
+                create_pop = {
+                    species = event_target:syncretic_spawn_pops
+                }
+            }
+            }                
+            else = {
+                random_list = {
+                    1 = {
+                                        while = {
+                    count = 5
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 6
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 7
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 8
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 9
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        1 = {
+                                        while = {
+                    count = 10
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                }
+            }
+            add_district = district_city
+			add_district = district_farming
+			add_district = district_mining
+			add_district = district_generator
+			add_building = building_capital
+			add_building = building_foundry_1
+			while = {				count = 2
+				create_army = {
+					name = random
+					owner = event_target:independant_colony_empire
+					species = event_target:independant_origin_species
+					type = defense_army
+                }
+                
+            }
+        }
+        event_target:independant_colony_empire = {
+            establish_communications_no_message = root
+        }
+        last_created_country = {
+            country_event = { id = independant_colony.0004 }
+        }
+                        }
+            }
+    }
+  
+}
+
+country_event = {
+        id = independant_colony.0016
+hide_window = yes
+    is_triggered_only = yes
+    	trigger = {
+            NOR = { has_country_flag = first_band
+            has_country_flag = second_band
+            has_country_flag = third_band
+            has_country_flag = fourth_band
+                                  has_country_flag = first_station_band
+                                  has_country_flag = second_station_band
+ }
+		any_system = {
+			any_system_planet = {
+				is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+				distance = {
+					source = root.owner.capital_scope
+					max_jumps <= 25
+					min_jumps >= 21
+				}
+				solar_system = {
+					NOT = { exists = starbase }
+				}
+			}
+		}
+	}
+    immediate = {
+      closest_system = {
+                        random_planet = {
+            limit = {
+                is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+                distance = {
+                    source = root.owner.capital_scope
+					max_jumps <= 25
+					min_jumps >= 21
+                }
+                solar_system = {
+                    NOT = { exists = starbase }
+                }
+            }
+                        save_global_event_target_as = independant_one_planet
+                                                set_planet_flag = independant_target
+                                                                                                event_target:independant_origin_civ = {
+                                                                                                    set_country_flag = fifth_band
+                                                }
+    create_country = {
+            name = random
+            authority = random
+            civics = random
+            species = event_target:independant_origin_species
+            ignore_initial_colony_error = yes
+            ethos = random
+            flag = random
+            type = default
+            effect = {
+                save_global_event_target_as = independant_colony_empire
+                add_resource = { minerals = 10000 }
+                add_resource = { energy = 10000 }
+                add_resource = { food = 10000 }
+                add_resource = { influence = 10 }
+                add_resource = { consumer_goods = 3000 }
+				add_resource = { alloys = 1000 }
+                set_graphical_culture = event_target:independant_origin_civ
+            }
+        }
+        event_target:independant_one_planet = {
+            solar_system = {
+                create_starbase = {
+                    size = starbase_outpost
+                    owner = event_target:independant_colony_empire
+                }
+            }
+            set_owner = event_target:independant_colony_empire
+            set_capital = yes
+            clear_blockers = yes
+            solar_system = {
+                every_system_planet = {
+                    surveyed = {
+                        set_surveyed = yes
+                        surveyor = root.owner
+                    }
+                }
+            }
+            if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_mechanists } }
+                           create_species = {
+                    name = "Robot"
+                    class = ROBOT
+                    portrait = "default_robot"
+                    namelist = "AI"
+                    traits = {
+                        trait = trait_mechanical
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = mechanist_spawn_robots
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 8
+                create_pop = {
+                    species = event_target:mechanist_spawn_robots
+                }
+            }
+            add_building = building_robot_assembly_plant
+            }
+            else_if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_syncretic_evolution } }
+                           create_species = {
+                    name = random
+                    class = random
+                    portrait = random
+                    namelist = random
+                    traits = {
+                        trait = trait_presapient_proles
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = syncretic_spawn_pops
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 12
+                create_pop = {
+                    species = event_target:syncretic_spawn_pops
+                }
+            }
+            }                
+            else = {
+                random_list = {
+                    1 = {
+                                        while = {
+                    count = 5
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 6
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 7
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 8
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 9
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        1 = {
+                                        while = {
+                    count = 10
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                }
+            }
+            add_district = district_city
+			add_district = district_farming
+			add_district = district_mining
+			add_district = district_generator
+			add_building = building_capital
+			add_building = building_foundry_1
+			while = {				count = 2
+				create_army = {
+					name = random
+					owner = event_target:independant_colony_empire
+					species = event_target:independant_origin_species
+					type = defense_army
+                }
+                
+            }
+        }
+        event_target:independant_colony_empire = {
+            establish_communications_no_message = root
+        }
+        last_created_country = {
+            country_event = { id = independant_colony.0004 }
+        }
+                        }
+            }
+    }
+}
+
+country_event = {
+        id = independant_colony.0017
+hide_window = yes
+    is_triggered_only = yes
+    	trigger = {
+            NOR = { has_country_flag = first_band
+             has_country_flag = second_band
+              has_country_flag = third_band
+               has_country_flag = fourth_band
+                has_country_flag = fifth_band
+                                      has_country_flag = first_station_band
+                                      has_country_flag = second_station_band
+             }
+		any_system = {
+			any_system_planet = {
+				is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+				distance = {
+					source = root.owner.capital_scope
+					max_jumps <= 30
+					min_jumps >= 26
+				}
+				solar_system = {
+					NOT = { exists = starbase }
+				}
+			}
+		}
+	}
+    immediate = {
+      closest_system = {
+                        random_planet = {
+            limit = {
+                is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+                distance = {
+                    source = root.owner.capital_scope
+					max_jumps <= 30
+					min_jumps >= 26
+                }
+                solar_system = {
+                    NOT = { exists = starbase }
+                }
+            }
+                        save_global_event_target_as = independant_one_planet
+                                                set_planet_flag = independant_target
+                                                                                                event_target:independant_origin_civ = {
+                                                                                                    set_country_flag = sixth_band
+                                                }
+    create_country = {
+            name = random
+            authority = random
+            civics = random
+            species = event_target:independant_origin_species
+            ignore_initial_colony_error = yes
+            ethos = random
+            flag = random
+            type = default
+            effect = {
+                save_global_event_target_as = independant_colony_empire
+                add_resource = { minerals = 10000 }
+                add_resource = { energy = 10000 }
+                add_resource = { food = 10000 }
+                add_resource = { influence = 10 }
+                add_resource = { consumer_goods = 3000 }
+				add_resource = { alloys = 1000 }
+                set_graphical_culture = event_target:independant_origin_civ
+            }
+        }
+        event_target:independant_one_planet = {
+            solar_system = {
+                create_starbase = {
+                    size = starbase_outpost
+                    owner = event_target:independant_colony_empire
+                }
+            }
+            set_owner = event_target:independant_colony_empire
+            set_capital = yes
+            clear_blockers = yes
+            solar_system = {
+                every_system_planet = {
+                    surveyed = {
+                        set_surveyed = yes
+                        surveyor = root.owner
+                    }
+                }
+            }
+            if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_mechanists } }
+                           create_species = {
+                    name = "Robot"
+                    class = ROBOT
+                    portrait = "default_robot"
+                    namelist = "AI"
+                    traits = {
+                        trait = trait_mechanical
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = mechanist_spawn_robots
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 8
+                create_pop = {
+                    species = event_target:mechanist_spawn_robots
+                }
+            }
+            add_building = building_robot_assembly_plant
+            }
+            else_if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_syncretic_evolution } }
+                           create_species = {
+                    name = random
+                    class = random
+                    portrait = random
+                    namelist = random
+                    traits = {
+                        trait = trait_presapient_proles
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = syncretic_spawn_pops
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 12
+                create_pop = {
+                    species = event_target:syncretic_spawn_pops
+                }
+            }
+            }                
+            else = {
+                random_list = {
+                    1 = {
+                                        while = {
+                    count = 5
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 6
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 7
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 8
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 9
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        1 = {
+                                        while = {
+                    count = 10
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                }
+            }
+            add_district = district_city
+			add_district = district_farming
+			add_district = district_mining
+			add_district = district_generator
+			add_building = building_capital
+			add_building = building_foundry_1
+			while = {				count = 2
+				create_army = {
+					name = random
+					owner = event_target:independant_colony_empire
+					species = event_target:independant_origin_species
+					type = defense_army
+                }
+                
+            }
+        }
+        event_target:independant_colony_empire = {
+            establish_communications_no_message = root
+        }
+        last_created_country = {
+            country_event = { id = independant_colony.0004 }
+        }
+                        }
+            }
+    } 
+}
+
+country_event = {
+        id = independant_colony.0018
+hide_window = yes
+    is_triggered_only = yes
+    	trigger = {
+            NOR = { has_country_flag = first_band            
+             has_country_flag = second_band
+              has_country_flag = third_band
+               has_country_flag = fourth_band
+                has_country_flag = fifth_band
+                has_country_flag = sixth_band
+                                      has_country_flag = first_station_band
+                                      has_country_flag = second_station_band
+                                  has_country_flag = third_station_band                                      
+             }
+		any_system = {
+			any_system_planet = {
+				is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+				distance = {
+					source = root.owner.capital_scope
+					max_jumps <= 35
+					min_jumps >= 31
+				}
+				solar_system = {
+					NOT = { exists = starbase }
+				}
+			}
+		}
+	}
+    immediate = {
+      closest_system = {
+                        random_planet = {
+            limit = {
+                is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+                distance = {
+                    source = root.owner.capital_scope
+					max_jumps <= 35
+					min_jumps >= 31
+                }
+                solar_system = {
+                    NOT = { exists = starbase }
+                }
+            }
+                        save_global_event_target_as = independant_one_planet
+                                                set_planet_flag = independant_target
+                                                                                                event_target:independant_origin_civ = {
+                                                                                                    set_country_flag = seventh_band
+                                                }
+    create_country = {
+            name = random
+            authority = random
+            civics = random
+            species = event_target:independant_origin_species
+            ignore_initial_colony_error = yes
+            ethos = random
+            flag = random
+            type = default
+            effect = {
+                save_global_event_target_as = independant_colony_empire
+                add_resource = { minerals = 10000 }
+                add_resource = { energy = 10000 }
+                add_resource = { food = 10000 }
+                add_resource = { influence = 10 }
+                add_resource = { consumer_goods = 3000 }
+				add_resource = { alloys = 1000 }
+                set_graphical_culture = event_target:independant_origin_civ
+            }
+        }
+        event_target:independant_one_planet = {
+            solar_system = {
+                create_starbase = {
+                    size = starbase_outpost
+                    owner = event_target:independant_colony_empire
+                }
+            }
+            set_owner = event_target:independant_colony_empire
+            set_capital = yes
+            clear_blockers = yes
+            solar_system = {
+                every_system_planet = {
+                    surveyed = {
+                        set_surveyed = yes
+                        surveyor = root.owner
+                    }
+                }
+            }
+             if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_mechanists } }
+                           create_species = {
+                    name = "Robot"
+                    class = ROBOT
+                    portrait = "default_robot"
+                    namelist = "AI"
+                    traits = {
+                        trait = trait_mechanical
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = mechanist_spawn_robots
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 8
+                create_pop = {
+                    species = event_target:mechanist_spawn_robots
+                }
+            }
+            add_building = building_robot_assembly_plant
+            }
+            else_if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_syncretic_evolution } }
+                           create_species = {
+                    name = random
+                    class = random
+                    portrait = random
+                    namelist = random
+                    traits = {
+                        trait = trait_presapient_proles
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = syncretic_spawn_pops
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 12
+                create_pop = {
+                    species = event_target:syncretic_spawn_pops
+                }
+            }
+            }                
+            else = {
+                random_list = {
+                    1 = {
+                                        while = {
+                    count = 5
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 6
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 7
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 8
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 9
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        1 = {
+                                        while = {
+                    count = 10
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                }
+            }
+            add_district = district_city
+			add_district = district_farming
+			add_district = district_mining
+			add_district = district_generator
+			add_building = building_capital
+			add_building = building_foundry_1
+			while = {				count = 2
+				create_army = {
+					name = random
+					owner = event_target:independant_colony_empire
+					species = event_target:independant_origin_species
+					type = defense_army
+                }
+                
+            }
+        }
+        event_target:independant_colony_empire = {
+            establish_communications_no_message = root
+        }
+        last_created_country = {
+            country_event = { id = independant_colony.0004 }
+        }
+                        }
+            }
+    }     
+}
+
+country_event = {
+        id = independant_colony.0019
+hide_window = yes
+    is_triggered_only = yes
+    	trigger = {
+            NOR = { has_country_flag = first_band
+                         has_country_flag = second_band
+              has_country_flag = third_band
+               has_country_flag = fourth_band
+                has_country_flag = fifth_band
+                             has_country_flag = sixth_band
+              has_country_flag = seventh_band
+                                    has_country_flag = first_station_band
+                                      has_country_flag = third_station_band
+                                      has_country_flag = second_station_band
+             }
+		any_system = {
+			any_system_planet = {
+				is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+				distance = {
+					source = root.owner.capital_scope
+					max_jumps <= 40
+					min_jumps >= 36
+				}
+				solar_system = {
+					NOT = { exists = starbase }
+				}
+			}
+		}
+	}
+    immediate = {
+      closest_system = {
+                        random_planet = {
+            limit = {
+                is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+                distance = {
+                    source = root.owner.capital_scope
+					max_jumps <= 40
+					min_jumps >= 36
+                }
+                solar_system = {
+                    NOT = { exists = starbase }
+                }
+            }
+                        save_global_event_target_as = independant_one_planet
+                                                set_planet_flag = independant_target
+                                                                                                event_target:independant_origin_civ = {
+                                                                                                    set_country_flag = eigth_band
+                                                }
+    create_country = {
+            name = random
+            authority = random
+            civics = random
+            species = event_target:independant_origin_species
+            ignore_initial_colony_error = yes
+            ethos = random
+            flag = random
+            type = default
+            effect = {
+                save_global_event_target_as = independant_colony_empire
+                add_resource = { minerals = 10000 }
+                add_resource = { energy = 10000 }
+                add_resource = { food = 10000 }
+                add_resource = { influence = 10 }
+                add_resource = { consumer_goods = 3000 }
+				add_resource = { alloys = 1000 }
+                set_graphical_culture = event_target:independant_origin_civ
+            }
+        }
+        event_target:independant_one_planet = {
+            solar_system = {
+                create_starbase = {
+                    size = starbase_outpost
+                    owner = event_target:independant_colony_empire
+                }
+            }
+            set_owner = event_target:independant_colony_empire
+            set_capital = yes
+            clear_blockers = yes
+            solar_system = {
+                every_system_planet = {
+                    surveyed = {
+                        set_surveyed = yes
+                        surveyor = root.owner
+                    }
+                }
+            }
+            if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_mechanists } }
+                           create_species = {
+                    name = "Robot"
+                    class = ROBOT
+                    portrait = "default_robot"
+                    namelist = "AI"
+                    traits = {
+                        trait = trait_mechanical
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = mechanist_spawn_robots
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 8
+                create_pop = {
+                    species = event_target:mechanist_spawn_robots
+                }
+            }
+            add_building = building_robot_assembly_plant
+            }
+            else_if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_syncretic_evolution } }
+                           create_species = {
+                    name = random
+                    class = random
+                    portrait = random
+                    namelist = random
+                    traits = {
+                        trait = trait_presapient_proles
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = syncretic_spawn_pops
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 12
+                create_pop = {
+                    species = event_target:syncretic_spawn_pops
+                }
+            }
+            }                
+            else = {
+                random_list = {
+                    1 = {
+                                        while = {
+                    count = 5
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 6
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 7
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 8
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 9
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        1 = {
+                                        while = {
+                    count = 10
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                }
+            }
+            add_district = district_city
+			add_district = district_farming
+			add_district = district_mining
+			add_district = district_generator
+			add_building = building_capital
+			add_building = building_foundry_1
+			while = {				count = 2
+				create_army = {
+					name = random
+					owner = event_target:independant_colony_empire
+					species = event_target:independant_origin_species
+					type = defense_army
+                }
+                
+            }
+        }
+        event_target:independant_colony_empire = {
+            establish_communications_no_message = root
+        }
+        last_created_country = {
+            country_event = { id = independant_colony.0004 }
+        }
+                        }
+            }
+    }    
+}
+
+country_event = {
+        id = independant_colony.0020
+hide_window = yes
+    is_triggered_only = yes
+    	trigger = {
+            NOR = { has_country_flag = first_band 
+                         has_country_flag = second_band
+              has_country_flag = third_band
+               has_country_flag = fourth_band
+                has_country_flag = fifth_band
+                         has_country_flag = sixth_band
+              has_country_flag = seventh_band
+               has_country_flag = eigth_band
+                                     has_country_flag = first_station_band
+                                      has_country_flag = third_station_band
+                                      has_country_flag = second_station_band
+                                      has_country_flag = fourth_station_band                                      
+             }
+		any_system = {
+			any_system_planet = {
+				is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+				distance = {
+					source = root.owner.capital_scope
+					max_jumps <= 45
+					min_jumps >= 41
+				}
+				solar_system = {
+					NOT = { exists = starbase }
+				}
+			}
+		}
+	}
+    immediate = {
+      closest_system = {
+                        random_planet = {
+            limit = {
+                is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+                distance = {
+                    source = root.owner.capital_scope
+					max_jumps <= 45
+					min_jumps >= 41
+                }
+                solar_system = {
+                    NOT = { exists = starbase }
+                }
+            }
+                        save_global_event_target_as = independant_one_planet
+                                                set_planet_flag = independant_target
+                                                                                                event_target:independant_origin_civ = {
+                                                                                                    set_country_flag = ninth_band
+                                                }
+    create_country = {
+            name = random
+            authority = random
+            civics = random
+            species = event_target:independant_origin_species
+            ignore_initial_colony_error = yes
+            ethos = random
+            flag = random
+            type = default
+            effect = {
+                save_global_event_target_as = independant_colony_empire
+                add_resource = { minerals = 10000 }
+                add_resource = { energy = 10000 }
+                add_resource = { food = 10000 }
+                add_resource = { influence = 10 }
+                add_resource = { consumer_goods = 3000 }
+				add_resource = { alloys = 1000 }
+                set_graphical_culture = event_target:independant_origin_civ
+            }
+        }
+        event_target:independant_one_planet = {
+            solar_system = {
+                create_starbase = {
+                    size = starbase_outpost
+                    owner = event_target:independant_colony_empire
+                }
+            }
+            set_owner = event_target:independant_colony_empire
+            set_capital = yes
+            clear_blockers = yes
+            solar_system = {
+                every_system_planet = {
+                    surveyed = {
+                        set_surveyed = yes
+                        surveyor = root.owner
+                    }
+                }
+            }
+            if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_mechanists } }
+                           create_species = {
+                    name = "Robot"
+                    class = ROBOT
+                    portrait = "default_robot"
+                    namelist = "AI"
+                    traits = {
+                        trait = trait_mechanical
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = mechanist_spawn_robots
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 8
+                create_pop = {
+                    species = event_target:mechanist_spawn_robots
+                }
+            }
+            add_building = building_robot_assembly_plant
+            }
+            else_if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_syncretic_evolution } }
+                           create_species = {
+                    name = random
+                    class = random
+                    portrait = random
+                    namelist = random
+                    traits = {
+                        trait = trait_presapient_proles
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = syncretic_spawn_pops
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 12
+                create_pop = {
+                    species = event_target:syncretic_spawn_pops
+                }
+            }
+            }                
+            else = {
+                random_list = {
+                    1 = {
+                                        while = {
+                    count = 5
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 6
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 7
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 8
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 9
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        1 = {
+                                        while = {
+                    count = 10
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                }
+            }
+            add_district = district_city
+			add_district = district_farming
+			add_district = district_mining
+			add_district = district_generator
+			add_building = building_capital
+			add_building = building_foundry_1
+			while = {				count = 2
+				create_army = {
+					name = random
+					owner = event_target:independant_colony_empire
+					species = event_target:independant_origin_species
+					type = defense_army
+                }
+                
+            }
+        }
+        event_target:independant_colony_empire = {
+            establish_communications_no_message = root
+        }
+        last_created_country = {
+            country_event = { id = independant_colony.0004 }
+        }
+                        }
+            }
+    }      
+}
+
+country_event = {
+        id = independant_colony.0021
+hide_window = yes
+    is_triggered_only = yes
+    	trigger = {
+            NOR = { has_country_flag = first_band 
+                         has_country_flag = second_band
+              has_country_flag = third_band
+               has_country_flag = fourth_band
+                has_country_flag = fifth_band
+                          has_country_flag = sixth_band
+              has_country_flag = seventh_band
+               has_country_flag = eigth_band
+                has_country_flag = ninth_band
+                                      has_country_flag = first_station_band
+                                     has_country_flag = fourth_station_band
+                                      has_country_flag = third_station_band
+                                      has_country_flag = second_station_band
+             }
+		any_system = {
+			any_system_planet = {
+				is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+				distance = {
+					source = root.owner.capital_scope
+					max_jumps <= 50
+					min_jumps >= 46
+				}
+				solar_system = {
+					NOT = { exists = starbase }
+				}
+			}
+		}
+	}
+    immediate = {
+      closest_system = {
+                        random_planet = {
+            limit = {
+                is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+                distance = {
+                    source = root.owner.capital_scope
+					max_jumps <= 50
+					min_jumps >= 46
+                }
+                solar_system = {
+                    NOT = { exists = starbase }
+                }
+            }
+                        save_global_event_target_as = independant_one_planet
+                                                set_planet_flag = independant_target
+                                                                                                event_target:independant_origin_civ = {
+                                                                                                    set_country_flag = tenth_band
+                                                }
+    create_country = {
+            name = random
+            authority = random
+            civics = random
+            species = event_target:independant_origin_species
+            ignore_initial_colony_error = yes
+            ethos = random
+            flag = random
+            type = default
+            effect = {
+                save_global_event_target_as = independant_colony_empire
+                add_resource = { minerals = 10000 }
+                add_resource = { energy = 10000 }
+                add_resource = { food = 10000 }
+                add_resource = { influence = 10 }
+                add_resource = { consumer_goods = 3000 }
+				add_resource = { alloys = 1000 }
+                set_graphical_culture = event_target:independant_origin_civ
+            }
+        }
+        event_target:independant_one_planet = {
+            solar_system = {
+                create_starbase = {
+                    size = starbase_outpost
+                    owner = event_target:independant_colony_empire
+                }
+            }
+            set_owner = event_target:independant_colony_empire
+            set_capital = yes
+            clear_blockers = yes
+            solar_system = {
+                every_system_planet = {
+                    surveyed = {
+                        set_surveyed = yes
+                        surveyor = root.owner
+                    }
+                }
+            }
+            if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_mechanists } }
+                           create_species = {
+                    name = "Robot"
+                    class = ROBOT
+                    portrait = "default_robot"
+                    namelist = "AI"
+                    traits = {
+                        trait = trait_mechanical
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = mechanist_spawn_robots
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 8
+                create_pop = {
+                    species = event_target:mechanist_spawn_robots
+                }
+            }
+            add_building = building_robot_assembly_plant
+            }
+            else_if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_syncretic_evolution } }
+                           create_species = {
+                    name = random
+                    class = random
+                    portrait = random
+                    namelist = random
+                    traits = {
+                        trait = trait_presapient_proles
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = syncretic_spawn_pops
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 12
+                create_pop = {
+                    species = event_target:syncretic_spawn_pops
+                }
+            }
+            }                
+            else = {
+                random_list = {
+                    1 = {
+                                        while = {
+                    count = 5
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 6
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 7
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 8
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 9
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        1 = {
+                                        while = {
+                    count = 10
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                }
+            }
+            add_district = district_city
+			add_district = district_farming
+			add_district = district_mining
+			add_district = district_generator
+			add_building = building_capital
+			add_building = building_foundry_1
+			while = {				count = 2
+				create_army = {
+					name = random
+					owner = event_target:independant_colony_empire
+					species = event_target:independant_origin_species
+					type = defense_army
+                }
+                
+            }
+        }
+        event_target:independant_colony_empire = {
+            establish_communications_no_message = root
+        }
+        last_created_country = {
+            country_event = { id = independant_colony.0004 }
+        }
+                        }
+            }
+    }     
+}
+
+
+country_event = {
+        id = independant_colony.0022
+hide_window = yes
+    is_triggered_only = yes
+    	trigger = {
+            NOR = { has_country_flag = first_band 
+                                     has_country_flag = second_band
+              has_country_flag = third_band
+               has_country_flag = fourth_band
+                has_country_flag = fifth_band
+                          has_country_flag = sixth_band
+              has_country_flag = seventh_band
+               has_country_flag = eigth_band
+                has_country_flag = ninth_band
+                has_country_flag = tenth_band
+                                    has_country_flag = first_station_band
+                                        has_country_flag = second_station_band
+                                    has_country_flag = third_station_band
+                                        has_country_flag = fourth_station_band      
+                                            has_country_flag = fifth_station_band  
+             }
+		any_system = {
+			any_system_planet = {
+				is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+				distance = {
+					source = root.owner.capital_scope
+					max_jumps <= 55
+					min_jumps >= 51
+				}
+				solar_system = {
+					NOT = { exists = starbase }
+				}
+			}
+		}
+	}
+    immediate = {
+      closest_system = {
+                        random_planet = {
+            limit = {
+                is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+                distance = {
+                    source = root.owner.capital_scope
+					max_jumps <= 55
+					min_jumps >= 51
+                }
+                solar_system = {
+                    NOT = { exists = starbase }
+                }
+            }
+                        save_global_event_target_as = independant_one_planet
+                                                set_planet_flag = independant_target
+                                                                                                event_target:independant_origin_civ = {
+                                                                                                    set_country_flag = eleventh_band
+                                                }
+    create_country = {
+            name = random
+            authority = random
+            civics = random
+            species = event_target:independant_origin_species
+            ignore_initial_colony_error = yes
+            ethos = random
+            flag = random
+            type = default
+            effect = {
+                save_global_event_target_as = independant_colony_empire
+                add_resource = { minerals = 10000 }
+                add_resource = { energy = 10000 }
+                add_resource = { food = 10000 }
+                add_resource = { influence = 10 }
+                add_resource = { consumer_goods = 3000 }
+				add_resource = { alloys = 1000 }
+                set_graphical_culture = event_target:independant_origin_civ
+            }
+        }
+        event_target:independant_one_planet = {
+            solar_system = {
+                create_starbase = {
+                    size = starbase_outpost
+                    owner = event_target:independant_colony_empire
+                }
+            }
+            set_owner = event_target:independant_colony_empire
+            set_capital = yes
+            clear_blockers = yes
+            solar_system = {
+                every_system_planet = {
+                    surveyed = {
+                        set_surveyed = yes
+                        surveyor = root.owner
+                    }
+                }
+            }
+            if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_mechanists } }
+                           create_species = {
+                    name = "Robot"
+                    class = ROBOT
+                    portrait = "default_robot"
+                    namelist = "AI"
+                    traits = {
+                        trait = trait_mechanical
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = mechanist_spawn_robots
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 8
+                create_pop = {
+                    species = event_target:mechanist_spawn_robots
+                }
+            }
+            add_building = building_robot_assembly_plant
+            }
+            else_if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_syncretic_evolution } }
+                           create_species = {
+                    name = random
+                    class = random
+                    portrait = random
+                    namelist = random
+                    traits = {
+                        trait = trait_presapient_proles
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = syncretic_spawn_pops
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 12
+                create_pop = {
+                    species = event_target:syncretic_spawn_pops
+                }
+            }
+            }                
+            else = {
+                random_list = {
+                    1 = {
+                                        while = {
+                    count = 5
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 6
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 7
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 8
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 9
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        1 = {
+                                        while = {
+                    count = 10
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                }
+            }
+            add_district = district_city
+			add_district = district_farming
+			add_district = district_mining
+			add_district = district_generator
+			add_building = building_capital
+			add_building = building_foundry_1
+			while = {				count = 2
+				create_army = {
+					name = random
+					owner = event_target:independant_colony_empire
+					species = event_target:independant_origin_species
+					type = defense_army
+                }
+                
+            }
+        }
+        event_target:independant_colony_empire = {
+            establish_communications_no_message = root
+        }
+        last_created_country = {
+            country_event = { id = independant_colony.0004 }
+        }
+                        }
+            }
+    }     
+}
+
+country_event = {
+        id = independant_colony.0023
+hide_window = yes
+    is_triggered_only = yes
+    	trigger = {
+            NOR = { has_country_flag = first_band
+                                     has_country_flag = second_band
+              has_country_flag = third_band
+               has_country_flag = fourth_band
+                has_country_flag = fifth_band
+                          has_country_flag = sixth_band
+              has_country_flag = seventh_band
+               has_country_flag = eigth_band
+                has_country_flag = ninth_band
+              has_country_flag = tenth_band
+              has_country_flag = eleventh_band
+                                    has_country_flag = first_station_band
+                                        has_country_flag = second_station_band
+                                    has_country_flag = third_station_band
+                                        has_country_flag = fourth_station_band      
+                                            has_country_flag = fifth_station_band                                   
+            }
+		any_system = {
+			any_system_planet = {
+				is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+				distance = {
+					source = root.owner.capital_scope
+					max_jumps <= 300
+					min_jumps >= 56
+				}
+				solar_system = {
+					NOT = { exists = starbase }
+				}
+			}
+		}
+	}
+    immediate = {
+      closest_system = {
+                        random_planet = {
+            limit = {
+                is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				habitable_planet = yes
+				has_anomaly = no
+                                NOR = {
+                    has_modifier = "holy_planet"
+                    solar_system = {
+                        has_star_flag = hostile_system
+                        has_star_flag = precursor_system
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_ringworld_habitable_damaged
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_hive
+                }
+                distance = {
+                    source = root.owner.capital_scope
+					max_jumps <= 300
+					min_jumps >= 56
+                }
+                solar_system = {
+                    NOT = { exists = starbase }
+                }
+            }
+                        save_global_event_target_as = independant_one_planet
+                                                set_planet_flag = independant_target
+                                            event_target:independant_origin_civ = {
+                    set_country_flag = twelth_station_band
+                }
+    create_country = {
+            name = random
+            authority = random
+            civics = random
+            species = event_target:independant_origin_species
+            ignore_initial_colony_error = yes
+            ethos = random
+            flag = random
+            type = default
+            effect = {
+                save_global_event_target_as = independant_colony_empire
+                add_resource = { minerals = 10000 }
+                add_resource = { energy = 10000 }
+                add_resource = { food = 10000 }
+                add_resource = { influence = 10 }
+                add_resource = { consumer_goods = 3000 }
+				add_resource = { alloys = 1000 }
+                set_graphical_culture = event_target:independant_origin_civ
+            }
+        }
+        event_target:independant_one_planet = {
+            solar_system = {
+                create_starbase = {
+                    size = starbase_outpost
+                    owner = event_target:independant_colony_empire
+                }
+            }
+            set_owner = event_target:independant_colony_empire
+            set_capital = yes
+            clear_blockers = yes
+            solar_system = {
+                every_system_planet = {
+                    surveyed = {
+                        set_surveyed = yes
+                        surveyor = root.owner
+                    }
+                }
+            }
+            if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_mechanists } }
+                           create_species = {
+                    name = "Robot"
+                    class = ROBOT
+                    portrait = "default_robot"
+                    namelist = "AI"
+                    traits = {
+                        trait = trait_mechanical
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = mechanist_spawn_robots
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 8
+                create_pop = {
+                    species = event_target:mechanist_spawn_robots
+                }
+            }
+            add_building = building_robot_assembly_plant
+            }
+            else_if = {
+                limit = { event_target:independant_colony_empire = { has_civic = civic_syncretic_evolution } }
+                           create_species = {
+                    name = random
+                    class = random
+                    portrait = random
+                    namelist = random
+                    traits = {
+                        trait = trait_presapient_proles
+                        trait = random_traits
+                    }
+                                    effect = {
+                    save_global_event_target_as = syncretic_spawn_pops
+                }
+                }
+            random_list = {
+                1 = {
+                                while = {
+                count = 2
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                3 = {
+                                while = {
+                count = 3
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+                1 = {
+                                while = {
+                count = 4
+                create_pop = {
+                    species = independant_origin_species
+                }
+            }
+                }
+            }
+            while = {
+                count = 12
+                create_pop = {
+                    species = event_target:syncretic_spawn_pops
+                }
+            }
+            }                
+            else = {
+                random_list = {
+                    1 = {
+                                        while = {
+                    count = 5
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 6
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 7
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        3 = {
+                                        while = {
+                    count = 8
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        2 = {
+                                        while = {
+                    count = 9
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                                        1 = {
+                                        while = {
+                    count = 10
+                    create_pop = {
+                        species = independant_origin_species
+                    }
+                }
+                    }
+                }
+            }
+            add_district = district_city
+			add_district = district_farming
+			add_district = district_mining
+			add_district = district_generator
+			add_building = building_capital
+			add_building = building_foundry_1
+			while = {				count = 2
+				create_army = {
+					name = random
+					owner = event_target:independant_colony_empire
+					species = event_target:independant_origin_species
+					type = defense_army
+                }
+                
+            }
+        }
+        event_target:independant_colony_empire = {
+            establish_communications_no_message = root
+        }
+        last_created_country = {
+            country_event = { id = independant_colony.0004 }
+        }
+                        }
+            }
+    }
+ 
+}
+#
+
+
+# this gives a construction ship a science ship and renames both the planet and the civ so that bad names don't appear
+
+country_event = {
+    id = independant_colony.0004
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        capital_scope = { set_name = random }
+        set_name = random
+        copy_techs_from = {
+            target = event_target:independant_origin_civ
+        }
+        random_list = {
+            1 = {        add_opinion_modifier = {
+            who = event_target:independant_origin_civ
+            modifier = opinion_little_upstarts
+        }
+        add_opinion_modifier = {
+            who = root
+            modifier = opinion_sibling_rivalry
+        }}
+            1 = {        add_opinion_modifier = {
+            who = event_target:independant_origin_civ
+            modifier = opinion_patriots_of_home
+        }
+        add_opinion_modifier = {
+            who = root
+            modifier = opinion_for_the_empire
+        }}
+            1 = {        add_opinion_modifier = {
+            who = event_target:independant_origin_civ
+            modifier = opinion_terrorist_colonists
+        }
+        add_opinion_modifier = {
+            who = root
+            modifier = opinion_home_is_wrong_with_galaxy
+        }}
+            1 = {        add_opinion_modifier = {
+            who = event_target:independant_origin_civ
+            modifier = opinion_surprise_present
+        }
+        add_opinion_modifier = {
+            who = root
+            modifier = opinion_we_did_this_for_you
+        }}
+        }
+
+        create_fleet = {
+            effect = {
+            set_owner = root
+            create_ship = {
+                name = random
+                random_existing_design = constructor
+        }
+            set_fleet_stance = evasive
+            set_location = root.capital_scope
+            }
+        }
+			random_list =  {
+            30 = { create_fleet_from_naval_cap = 0.1
+			    random_owned_planet = {
+				    last_created_fleet = {
+					    set_location = prev
+				}
+			}
+            }
+            35 = { create_fleet_from_naval_cap = 0.2
+			    random_owned_planet = {
+				    last_created_fleet = {
+					    set_location = prev
+				}
+			}
+            }
+            20 = { create_fleet_from_naval_cap = 0.3
+			    random_owned_planet = {
+				    last_created_fleet = {
+					    set_location = prev
+				}
+			}
+            }
+            10 = { create_fleet_from_naval_cap = 0.4
+			    random_owned_planet = {
+				    last_created_fleet = {
+					    set_location = prev
+				}
+			}
+            }
+            5 = { create_fleet_from_naval_cap = 0.5
+			    random_owned_planet = {
+				    last_created_fleet = {
+					    set_location = prev
+				}
+			}
+            }
+            }
+        create_fleet = {
+            effect = {
+            set_owner = root
+            create_ship = {
+                name = random
+                random_existing_design = science
+        }
+        set_fleet_stance = evasive
+        set_location = root.capital_scope
+        owner = {
+            create_leader = {
+                type = scientist
+                sub_type = survey
+                name = random
+                species = owner_main_species
+            }
+        }
+        set_leader = last_created_leader
+        }
+        }
+
+        
+    }   
+}
+

@@ -1,0 +1,8 @@
+Independent Colonies Changlog
+
+
+01/10/2019
+Changed pop triggers from 30/70/120/180/250 to 35/100/200/400 to keep explosive small nations from occuring... hopefully
+Time from Trigger on all migrations is now 5-25 years
+Dissallowed independents from spawning on Ringworlds, Relic Worlds, Ecumenopoli, Hive worlds and Machine worlds.
+Added a check to avoid spawning in precursor systems
