@@ -1,6 +1,12 @@
 ####### PLANET AMBIENT ############
 sound =
 {
+	name = "pc_primal_01"
+	file = "ambient/continental_planet_01.wav"
+	always_load = no
+}
+sound =
+{
 	name = "pc_karst_01"
 	file = "ambient/continental_planet_01.wav"
 	always_load = no
@@ -231,6 +237,66 @@ sound =
 {
 	name = "pc_methane_01"
 	file = "ambient/artic_03.wav"
+	always_load = no
+}
+sound =
+{
+	name = "pc_ash_01"
+	file = "ambient/artic_03.wav"
+	always_load = no
+}
+sound =
+{
+	name = "pc_gghab_01"
+	file = "ambient/amb_generic_station_idle_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "pc_tmhab_01"
+	file = "ambient/amb_generic_station_idle_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "pc_tmhab2_01"
+	file = "ambient/amb_generic_station_idle_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "pc_mmhab_01"
+	file = "ambient/amb_generic_station_idle_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "pc_mmhab2_01"
+	file = "ambient/amb_generic_station_idle_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "pc_bhab_01"
+	file = "ambient/amb_generic_station_idle_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "pc_bchab_01"
+	file = "ambient/amb_generic_station_idle_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "pc_mhab_01"
+	file = "ambient/amb_generic_station_idle_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "pc_fhab_01"
+	file = "ambient/amb_generic_station_idle_01.wav"
 	always_load = no
 }
 

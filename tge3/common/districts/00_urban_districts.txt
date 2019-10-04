@@ -11,6 +11,19 @@ district_city = {
 		NOT = { is_planet_class = pc_habitat }
 		NOT = { is_planet_class = pc_city }
 		NOT = { is_planet_class = pc_ringworld_habitable }
+		NOT = { is_planet_class = pc_ecocity }
+		NOT = { is_planet_class = pc_archive }
+		NOT = { is_planet_class = pc_machine_factory }
+		NOT = { is_planet_class = pc_bioforge }
+		NOT = { is_planet_class = pc_gghab }
+		NOT = { is_planet_class = pc_tmhab }
+		NOT = { is_planet_class = pc_tmhab2 }
+		NOT = { is_planet_class = pc_mmhab }
+		NOT = { is_planet_class = pc_mmhab2 }
+		NOT = { is_planet_class = pc_bhab }
+		NOT = { is_planet_class = pc_bchab }
+		NOT = { is_planet_class = pc_mhab }
+		NOT = { is_planet_class = pc_fhab }
 	}
 	
 	potential = {
@@ -19,6 +32,19 @@ district_city = {
 		NOT = { is_planet_class = pc_habitat }
 		NOT = { is_planet_class = pc_city }
 		NOT = { is_planet_class = pc_ringworld_habitable }
+		NOT = { is_planet_class = pc_ecocity }
+		NOT = { is_planet_class = pc_archive }
+		NOT = { is_planet_class = pc_machine_factory }
+		NOT = { is_planet_class = pc_bioforge }
+		NOT = { is_planet_class = pc_gghab }
+		NOT = { is_planet_class = pc_tmhab }
+		NOT = { is_planet_class = pc_tmhab2 }
+		NOT = { is_planet_class = pc_mmhab }
+		NOT = { is_planet_class = pc_mmhab2 }
+		NOT = { is_planet_class = pc_bhab }
+		NOT = { is_planet_class = pc_bchab }
+		NOT = { is_planet_class = pc_mhab }
+		NOT = { is_planet_class = pc_fhab }
 	}
 	
 	allow = {
@@ -34,13 +60,13 @@ district_city = {
 	}	
 	
 	resources = {
-		category = planet_districts
+		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost
 		}
 		upkeep = {
 			energy = 2
-		}			
+		}		
 	}
 	
 	planet_modifier = {
@@ -51,50 +77,13 @@ district_city = {
 		potential = {
 			exists = owner
 			owner = { 
-				OR = { has_valid_civic = civic_agrarian_idyll }
+				has_valid_civic = civic_agrarian_idyll
 			}
 		}
 		modifier = {
 			planet_housing_add = -1
 		}
 	}	
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				OR = { has_valid_civic = civic_consumerism }
-			}
-		}
-		modifier = {
-			job_clerk_add = 1
-		}
-	}		
-	
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				OR = { has_valid_civic = civic_welfare_state }
-			}
-		}
-		modifier = {
-			planet_housing_add = 1
-		}
-	}	
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				OR = { has_tradition = tradition_harmony_simple_beauty }
-			}
-		}
-		modifier = {
-			planet_housing_add = -1
-		}
-	}		
 
 	triggered_planet_modifier = {
 		potential = {
@@ -169,7 +158,6 @@ district_city = {
 			planet = {
 				planet_devastation < 1
 				years_passed > 10
-				count_pops > 11
 				free_housing < 4
 			}
 		}
@@ -227,7 +215,6 @@ district_city = {
 			free_housing > 1
 		}
 	}
-
 }
 
 district_hive = {
@@ -239,6 +226,18 @@ district_hive = {
 		NOT = { is_planet_class = pc_habitat }
 		NOT = { is_planet_class = pc_city }
 		NOT = { is_planet_class = pc_ringworld_habitable }
+		NOT = { is_planet_class = pc_ecocity }
+		NOT = { is_planet_class = pc_archive }
+		NOT = { is_planet_class = pc_machine_factory }
+		NOT = { is_planet_class = pc_gghab }
+		NOT = { is_planet_class = pc_tmhab }
+		NOT = { is_planet_class = pc_tmhab2 }
+		NOT = { is_planet_class = pc_mmhab }
+		NOT = { is_planet_class = pc_mmhab2 }
+		NOT = { is_planet_class = pc_bhab }
+		NOT = { is_planet_class = pc_bchab }
+		NOT = { is_planet_class = pc_mhab }
+		NOT = { is_planet_class = pc_fhab }
 	}
 	
 	potential = {
@@ -247,6 +246,18 @@ district_hive = {
 		NOT = { is_planet_class = pc_habitat }
 		NOT = { is_planet_class = pc_city }
 		NOT = { is_planet_class = pc_ringworld_habitable }
+		NOT = { is_planet_class = pc_ecocity }
+		NOT = { is_planet_class = pc_archive }
+		NOT = { is_planet_class = pc_machine_factory }
+		NOT = { is_planet_class = pc_gghab }
+		NOT = { is_planet_class = pc_tmhab }
+		NOT = { is_planet_class = pc_tmhab2 }
+		NOT = { is_planet_class = pc_mmhab }
+		NOT = { is_planet_class = pc_mmhab2 }
+		NOT = { is_planet_class = pc_bhab }
+		NOT = { is_planet_class = pc_bchab }
+		NOT = { is_planet_class = pc_mhab }
+		NOT = { is_planet_class = pc_fhab }
 	}
 	
 	allow = {
@@ -261,7 +272,7 @@ district_hive = {
 	}	
 
 	resources = {
-		category = planet_districts
+		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost
 		}
@@ -304,14 +315,13 @@ district_hive = {
 		}
 	}
 	
-ai_weight = {
+	ai_weight = {
 		weight = 0
 		modifier = {
 			weight = 900
 			planet = {
 				planet_devastation < 1
 				years_passed > 10
-				count_pops > 11
 				free_housing < 4
 			}
 		}
@@ -380,6 +390,17 @@ district_nexus = {
 		NOT = { is_planet_class = pc_habitat }
 		NOT = { is_planet_class = pc_city }
 		NOT = { is_planet_class = pc_ringworld_habitable }
+		NOT = { is_planet_class = pc_ecocity }
+		NOT = { is_planet_class = pc_archive }
+		NOT = { is_planet_class = pc_gghab }
+		NOT = { is_planet_class = pc_tmhab }
+		NOT = { is_planet_class = pc_tmhab2 }
+		NOT = { is_planet_class = pc_mmhab }
+		NOT = { is_planet_class = pc_mmhab2 }
+		NOT = { is_planet_class = pc_bhab }
+		NOT = { is_planet_class = pc_bchab }
+		NOT = { is_planet_class = pc_mhab }
+		NOT = { is_planet_class = pc_fhab }
 	}
 	
 	potential = {
@@ -388,6 +409,17 @@ district_nexus = {
 		NOT = { is_planet_class = pc_habitat }
 		NOT = { is_planet_class = pc_city }
 		NOT = { is_planet_class = pc_ringworld_habitable }
+		NOT = { is_planet_class = pc_ecocity }
+		NOT = { is_planet_class = pc_archive }
+		NOT = { is_planet_class = pc_gghab }
+		NOT = { is_planet_class = pc_tmhab }
+		NOT = { is_planet_class = pc_tmhab2 }
+		NOT = { is_planet_class = pc_mmhab }
+		NOT = { is_planet_class = pc_mmhab2 }
+		NOT = { is_planet_class = pc_bhab }
+		NOT = { is_planet_class = pc_bchab }
+		NOT = { is_planet_class = pc_mhab }
+		NOT = { is_planet_class = pc_fhab }
 	}
 	
 	allow = {
@@ -402,7 +434,7 @@ district_nexus = {
 	}
 
 	resources = {
-		category = planet_districts
+		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost
 		}
@@ -447,14 +479,13 @@ district_nexus = {
 		}
 	}
 	
-ai_weight = {
+	ai_weight = {
 		weight = 0
 		modifier = {
 			weight = 900
 			planet = {
 				planet_devastation < 1
 				years_passed > 10
-				count_pops > 11
 				free_housing < 4
 			}
 		}
