@@ -7,3 +7,12 @@ NGraphics = {
 	SHIP_RANDOM_HEIGHT_OFFSET = 20.0 #20
 	DEAD_SHIP_DRAG = 1.0
 }
+
+NGameplay = {
+		EMPIRE_SIZE_BASE						= 50	# No penalties at this empire size or below
+		EMPIRE_SIZE_FROM_DISTRICTS				= 1		# Per district
+		EMPIRE_SIZE_FROM_SYSTEMS				= 2		# Per system
+		EMPIRE_SIZE_FROM_COLONIES				= 1		# Per planet
+		EMPIRE_SIZE_FROM_BRANCH_OFFICES			= 1		# Per branch office
+		EMPIRE_SIZE_FROM_POPS					= 0.1		# Per pop
+}

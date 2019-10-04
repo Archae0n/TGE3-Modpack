@@ -5,13 +5,12 @@ pdmhab_0 = {
 	construction_entity = ""
 	portrait = "GFX_megastructure_construction_background"
 	place_entity_on_planet_plane = yes
-	build_time = 1000
+	build_time = 360
 
 	resources = {
 		category = megastructures
 		cost = {
-			alloys = 2000
-			influence = 100
+			alloys = 500
 		}
 	}
 	construction_blocks_others = no
