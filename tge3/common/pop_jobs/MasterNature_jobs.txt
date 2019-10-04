@@ -670,7 +670,7 @@ sky_spawning_drone = {
 	
 	planet_modifier = {
 		planet_amenities_no_happiness_add = 5
-		pop_growth_speed = 0.1
+		pop_growth_speed = 0.25
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -806,7 +806,9 @@ sky_roboticist = {
 	}
 	
 	planet_modifier = {
-		planet_jobs_robotic_produces_mult = 0.2
+		planet_amenities_add = 5
+		planet_jobs_robotic_produces_mult = 0.05
+		planet_pop_assembly_add = 0.25
 	}
 
 	resources = {
