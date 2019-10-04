@@ -34,10 +34,9 @@ event = {
 			}	
 			country_event = { 
 				id = pirate_waves.4
-				days = 360
-				random = 3600
+				days = 3600
 			}	
-			# log = "Spawning a Pirate fleet"
+			# log = "Spawning a Pirate Freehold"
 		}
 	}
 }
@@ -892,8 +891,8 @@ fleet_event = {
 		}		
 		fleet_event = {
 			id = pirate_waves.71
-			days = 1800
-			random = 5400
+			days = 3600
+			random = 7200
 		}
 	}
 }
@@ -1315,39 +1314,51 @@ planet_event = {
 					}
 					fleet_event = {
 						id = pirate_waves.2
-						days = 10
+						days = 30
 					}	
 					fleet_event = {
 						id = pirate_waves.2
-						days = 20
-					}
-					fleet_event = {
-						id = pirate_waves.2
-						days = 30
-					}
-					fleet_event = {
-						id = pirate_waves.2
-						days = 40
-					}
-					fleet_event = {
-						id = pirate_waves.2
-						days = 50
-					}
-					fleet_event = {
-						id = pirate_waves.69
 						days = 60
+					}
+					fleet_event = {
+						id = pirate_waves.2
+						days = 90
+					}
+					fleet_event = {
+						id = pirate_waves.2
+						days = 120
+					}
+					fleet_event = {
+						id = pirate_waves.2
+						days = 150
+					}
+					fleet_event = {
+						id = pirate_waves.2
+						days = 180
 					}					
 					fleet_event = {
 						id = pirate_waves.69
-						days = 70
+						days = 210
+					}					
+					fleet_event = {
+						id = pirate_waves.69
+						days = 240
 					}
 					fleet_event = {
 						id = pirate_waves.69
-						days = 80
+						days = 270
+					}
+					fleet_event = {
+						id = pirate_waves.69
+						days = 300
+					}					
+					fleet_event = {
+						id = pirate_waves.69
+						days = 360
 					}					
 					fleet_event = {
 						id = pirate_waves.71
-						days = 1800
+						days = 3600
 					}					
 				}
 				# log = "Pirate Station '[This.GetName]' created..."
@@ -1434,7 +1445,7 @@ country_event = {
 				
 				# Spawn a Pirate Station
 				planet_event = {
-					id = pirate_waves.3
+					id = pirate_waves.15
 				}
 			}
 		}
@@ -1462,7 +1473,7 @@ country_event = {
 				
 				# Spawn a Pirate Station
 				planet_event = {
-					id = pirate_waves.3
+					id = pirate_waves.15
 				}
 			}
 		}
@@ -1905,7 +1916,7 @@ event = {
 			}
 			
 			while = {
-				count = 13
+				count = 8
 				
 				country_event = { id = pirate_waves.4 }
 			}
