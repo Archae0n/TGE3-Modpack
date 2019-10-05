@@ -1,5 +1,6 @@
 WRAITH = {
 	randomized = no
+	playable = { always = no }	
     portraits = {
     }   
     graphical_culture = wraith_01
