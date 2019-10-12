@@ -37,12 +37,13 @@ event = {
 					country_event = { 
 						id = pirate_waves.4
 						days = 360
+						random = 7200
 					}	
 					# log = "Spawning a Pirate Freehold"
 				}
 			}	
 			
-			499 = {}			
+			999 = {}			
 		}
 	}
 }
