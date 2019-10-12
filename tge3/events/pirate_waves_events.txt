@@ -109,6 +109,7 @@ fleet_event = {
 										id = pirate_waves.2.trigger.1
 										distance = {
 											source = PREV
+											use_bypasses = no
 											max_jumps <= 5
 											min_jumps >= 1
 										}
@@ -171,6 +172,7 @@ fleet_event = {
 										id = pirate_waves.2.trigger.1
 										distance = {
 											source = PREV
+											use_bypasses = no
 											max_jumps <= 10
 											min_jumps >= 3
 										}
@@ -384,6 +386,7 @@ fleet_event = {
 								id = pirate_waves.2.trigger.5
 								distance = {
 									source = PREV
+									use_bypasses = no
 									max_jumps <= 6
 									min_jumps >= 1
 								}
@@ -434,6 +437,7 @@ fleet_event = {
 								id = pirate_waves.2.trigger.5
 								distance = {
 									source = PREV
+									use_bypasses = no
 									max_jumps <= 12
 									min_jumps >= 1
 								}
@@ -471,6 +475,7 @@ fleet_event = {
 									AND = {
 										distance = {
 											source = PREV
+											use_bypasses = no
 											min_jumps >= 1
 										}
 										any_ship_in_system = {
@@ -486,6 +491,7 @@ fleet_event = {
 							find_random_system = {
 								trigger = {
 									distance = {
+										use_bypasses = no
 										source = PREV
 										min_jumps >= 1
 									}
@@ -698,6 +704,7 @@ fleet_event = {
 								id = pirate_waves.2.trigger.5
 								distance = {
 									source = PREV
+									use_bypasses = no
 									max_jumps <= 6
 									min_jumps >= 1
 								}
@@ -785,6 +792,7 @@ fleet_event = {
 									AND = {
 										distance = {
 											source = PREV
+											use_bypasses = no
 											min_jumps >= 1
 										}
 										any_ship_in_system = {
@@ -801,6 +809,7 @@ fleet_event = {
 								trigger = {
 									distance = {
 										source = PREV
+										use_bypasses = no
 										min_jumps >= 1
 									}
 									AND = {
