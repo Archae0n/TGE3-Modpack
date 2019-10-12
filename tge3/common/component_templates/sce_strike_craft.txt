@@ -1,4 +1,4 @@
-@launch_time = 0.3
+@launch_time = 1.5
 
 @cost2 = 89
 @cost3 = 92
@@ -17,9 +17,9 @@
 
 # [ INTERCEPTOR VARIABLES ] #
 @interceptor_count = 9
-@interceptor_attack_range = 8
-@interceptor_rotation_speed = 0.55
-@interceptor_acceleration_speed = 0.75
+@interceptor_attack_range = 10
+@interceptor_rotation_speed = 0.12
+@interceptor_acceleration_speed = 0.3
 @interceptor_regen = 0.3
 @interceptor_shield_damage_bonus = 1.2
 @interceptor_armor_damage_bonus = 1.2
@@ -27,9 +27,9 @@
 
 # [ FIGHTER VARIABLES ] #
 @fighter_count = 10
-@fighter_attack_range = 8
-@fighter_rotation_speed = 0.5
-@fighter_acceleration_speed = 0.6
+@fighter_attack_range = 10
+@fighter_rotation_speed = 0.1
+@fighter_acceleration_speed = 0.2
 @fighter_regen = 0.4
 @fighter_shield_damage_bonus = 1.75
 @fighter_armor_damage_bonus = 0.5
@@ -37,9 +37,9 @@
 
 # [ GUNSHIP VARIABLES ] #
 @gunship_count = 8
-@gunship_attack_range = 10
-@gunship_rotation_speed = 0.55
-@gunship_acceleration_speed = 0.75
+@gunship_attack_range = 12
+@gunship_rotation_speed = 0.08
+@gunship_acceleration_speed = 0.2
 @gunship_regen = 0.34
 @gunship_shield_damage_bonus = 0.5
 @gunship_armor_damage_bonus = 1.75
@@ -47,9 +47,9 @@
 
 # [ BOMBER VARIABLES ] #
 @bomber_count = 10
-@bomber_attack_range = 15
-@bomber_rotation_speed = 0.3
-@bomber_acceleration_speed = 0.5
+@bomber_attack_range = 18
+@bomber_rotation_speed = 0.05
+@bomber_acceleration_speed = 0.15
 @bomber_regen = 0.34
 @bomber_shield_penetration_bonus = 1.0
 @bomber_shield_damage_bonus = 1.0
@@ -135,7 +135,7 @@ strike_craft_component_template = {
 	shield = 5
 	evasion = 0.7
 	
-	speed = 350
+	speed = 300
 	rotation_speed = @interceptor_rotation_speed 
 	acceleration = @interceptor_acceleration_speed
 	
@@ -178,7 +178,7 @@ strike_craft_component_template = {
 	shield = 5
 	evasion = 0.7
 	
-	speed = 350
+	speed = 300
 	rotation_speed = @interceptor_rotation_speed 
 	acceleration = @interceptor_acceleration_speed
 	
@@ -222,7 +222,7 @@ strike_craft_component_template = {
 	shield = 5
 	evasion = 0.75
 	
-	speed = 375
+	speed = 300
 	rotation_speed = @interceptor_rotation_speed 
 	acceleration = @interceptor_acceleration_speed
 	
@@ -266,7 +266,7 @@ strike_craft_component_template = {
 	shield = 5
 	evasion = 0.80
 	
-	speed = 400
+	speed = 300
 	rotation_speed = @interceptor_rotation_speed 
 	acceleration = @interceptor_acceleration_speed
 	
@@ -310,7 +310,7 @@ strike_craft_component_template = {
 	shield = 5
 	evasion = 0.80
 	
-	speed = 400
+	speed = 300
 	rotation_speed = @interceptor_rotation_speed 
 	acceleration = @interceptor_acceleration_speed
 	
@@ -354,7 +354,7 @@ strike_craft_component_template = {
 	shield = 25
 	evasion = @psi_interceptor_evasion
 	
-	speed = 425
+	speed = 300
 	rotation_speed = @interceptor_rotation_speed 
 	acceleration = @interceptor_acceleration_speed
 	
@@ -398,7 +398,7 @@ strike_craft_component_template = {
 	shield = 5
 	evasion = 0.80
 	
-	speed = 425
+	speed = 300
 	rotation_speed = @interceptor_rotation_speed 
 	acceleration = @interceptor_acceleration_speed
 	
@@ -442,7 +442,7 @@ strike_craft_component_template = {
 	shield = 5
 	evasion = 0.80
 	
-	speed = 450
+	speed = 300
 	rotation_speed = @interceptor_rotation_speed 
 	acceleration = @interceptor_acceleration_speed
 	
@@ -496,7 +496,7 @@ strike_craft_component_template = {
 	shield = 5
 	evasion = 0.65
 	
-	speed = 325
+	speed = 300
 	rotation_speed = @fighter_rotation_speed
 	acceleration = @fighter_acceleration_speed
 	
@@ -542,7 +542,7 @@ strike_craft_component_template = {
 	shield = 5
 	evasion = 0.65
 	
-	speed = 325
+	speed = 300
 	rotation_speed = @fighter_rotation_speed
 	acceleration = @fighter_acceleration_speed
 	
@@ -583,7 +583,7 @@ strike_craft_component_template = {
 	shield = 10
 	evasion = 0.7
 	
-	speed = 350
+	speed = 300
 	rotation_speed = @fighter_rotation_speed
 	acceleration = @fighter_acceleration_speed
 	
@@ -627,7 +627,7 @@ strike_craft_component_template = {
 	shield = 15
 	evasion = 0.75
 	
-	speed = 375
+	speed = 300
 	rotation_speed = @fighter_rotation_speed
 	acceleration = @fighter_acceleration_speed
 	
@@ -671,7 +671,7 @@ strike_craft_component_template = {
 	shield = 15
 	evasion = 0.75
 	
-	speed = 375
+	speed = 300
 	rotation_speed = @fighter_rotation_speed
 	acceleration = @fighter_acceleration_speed
 	
@@ -714,7 +714,7 @@ strike_craft_component_template = {
 	shield = 35
 	evasion = @psi_fighter_evasion
 	
-	speed = 400
+	speed = 300
 	rotation_speed = @fighter_rotation_speed
 	acceleration = @fighter_acceleration_speed
 	
@@ -757,7 +757,7 @@ strike_craft_component_template = {
 	shield = 15
 	evasion = 0.75
 	
-	speed = 400
+	speed = 300
 	rotation_speed = @fighter_rotation_speed
 	acceleration = @fighter_acceleration_speed
 	
@@ -800,7 +800,7 @@ strike_craft_component_template = {
 	shield = 15
 	evasion = 0.75
 	
-	speed = 425
+	speed = 300
 	rotation_speed = @fighter_rotation_speed
 	acceleration = @fighter_acceleration_speed
 	
@@ -940,7 +940,7 @@ strike_craft_component_template = {
 	shield = 20
 	evasion = 0.5
 	
-	speed = 325
+	speed = 300
 	rotation_speed = @bomber_rotation_speed
 	acceleration = @bomber_acceleration_speed
 	
@@ -984,7 +984,7 @@ strike_craft_component_template = {
 	shield = 30
 	evasion = 0.55
 	
-	speed = 350
+	speed = 300
 	rotation_speed = @bomber_rotation_speed
 	acceleration = @bomber_acceleration_speed
 	
@@ -1028,7 +1028,7 @@ strike_craft_component_template = {
 	shield = 30
 	evasion = 0.55
 	
-	speed = 350
+	speed = 300
 	rotation_speed = @bomber_rotation_speed
 	acceleration = @bomber_acceleration_speed
 	
@@ -1071,7 +1071,7 @@ strike_craft_component_template = {
 	shield = 50
 	evasion = @psi_bomber_evasion
 	
-	speed = 375
+	speed = 300
 	rotation_speed = @bomber_rotation_speed
 	acceleration = @bomber_acceleration_speed
 	
@@ -1114,7 +1114,7 @@ strike_craft_component_template = {
 	shield = 30
 	evasion = 0.55
 	
-	speed = 375
+	speed = 300
 	rotation_speed = @bomber_rotation_speed
 	acceleration = @bomber_acceleration_speed
 	
@@ -1157,7 +1157,7 @@ strike_craft_component_template = {
 	shield = 30
 	evasion = 0.55
 	
-	speed = 400
+	speed = 300
 	rotation_speed = @bomber_rotation_speed
 	acceleration = @bomber_acceleration_speed
 	
@@ -1210,7 +1210,7 @@ strike_craft_component_template = {
 	shield = 20
 	evasion = 0.45
 	
-	speed = 305
+	speed = 300
 	rotation_speed = @gunship_rotation_speed
 	acceleration = @gunship_acceleration_speed
 	
@@ -1253,7 +1253,7 @@ strike_craft_component_template = {
 	shield = 20
 	evasion = 0.45
 	
-	speed = 305
+	speed = 300
 	rotation_speed = @gunship_rotation_speed
 	acceleration = @gunship_acceleration_speed
 	
@@ -1297,7 +1297,7 @@ strike_craft_component_template = {
 	shield = 30
 	evasion = 0.5
 	
-	speed = 335
+	speed = 300
 	rotation_speed = @gunship_rotation_speed
 	acceleration = @gunship_acceleration_speed
 	
@@ -1341,7 +1341,7 @@ strike_craft_component_template = {
 	shield = 40
 	evasion = 0.55
 	
-	speed = 360
+	speed = 300
 	rotation_speed = @gunship_rotation_speed
 	acceleration = @gunship_acceleration_speed
 	
@@ -1385,7 +1385,7 @@ strike_craft_component_template = {
 	shield = 40
 	evasion = 0.55
 	
-	speed = 360
+	speed = 300
 	rotation_speed = @gunship_rotation_speed
 	acceleration = @gunship_acceleration_speed
 	
@@ -1428,7 +1428,7 @@ strike_craft_component_template = {
 	shield = 60
 	evasion = @psi_gunship_evasion
 	
-	speed = 385
+	speed = 300
 	rotation_speed = @gunship_rotation_speed
 	acceleration = @gunship_acceleration_speed
 	
@@ -1471,7 +1471,7 @@ strike_craft_component_template = {
 	shield = 20
 	evasion = 0.55
 	
-	speed = 385
+	speed = 300
 	rotation_speed = @gunship_rotation_speed
 	acceleration = @gunship_acceleration_speed
 	
@@ -1514,7 +1514,7 @@ strike_craft_component_template = {
 	shield = 40
 	evasion = 0.55
 	
-	speed = 415
+	speed = 300
 	rotation_speed = @gunship_rotation_speed
 	acceleration = @gunship_acceleration_speed
 	
