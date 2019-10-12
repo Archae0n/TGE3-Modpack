@@ -31,19 +31,19 @@ mod_gov_2_5 = {
 }
 
 mod_gov_3_1 = {
-	country_influence_produces_add = 0.8
+        faction_influence_mult = 0.4
 }
 mod_gov_3_2 = {
-	country_influence_produces_add = 1.1
+        faction_influence_mult = 0.55
 }
 mod_gov_3_3 = {
-	country_influence_produces_add = 1.4
+        faction_influence_mult = 0.7
 }
 mod_gov_3_4 = {
-	country_influence_produces_add = 1.7
+        faction_influence_mult = 0.85
 }
 mod_gov_3_5 = {
-	country_influence_produces_add = 2.0
+        faction_influence_mult = 1.0
 }
 
 mod_gov_4_1 = {
