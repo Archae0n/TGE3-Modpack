@@ -1,9 +1,27 @@
 ﻿l_polish:
 
+ ##########################
+ ### Starbase Buildings ###
+ ##########################
+ sm_gt_trading_company_offices:0 "Trading Company Offices"
+ sm_gt_trading_company_offices_desc:0 "Offices for the many private enterprizes trading across all known space."
+ 
+ sm_gt_bounty_hunter_office:0 "Bounty Hunter Offices"
+ sm_gt_bounty_hunter_office_desc:0 "Offices dedicated to the contracts and payouts of bounty hunters."
+
 
  ###################
  ###### MODS #######
  ###################
+ 
+ mod_weapon_role_artillery_weapon_damage_mult:0 "Artillery Weapons Damage"
+ mod_weapon_role_artillery_weapon_fire_rate_mult:0 "Artillery Weapons Attack Speed"
+ mod_weapon_role_anti_hull_weapon_damage_mult:0 "Anti-Hull Weapons Damage"
+ mod_weapon_role_anti_hull_weapon_fire_rate_mult:0 "Anti-Hull Weapons Attack Speed"
+ mod_weapon_role_anti_shield_weapon_damage_mult:0 "Anti-Shield Weapons Damage"
+ mod_weapon_role_anti_shield_weapon_fire_rate_mult:0 "Anti-Shield Weapons Attack Speed"
+ mod_weapon_role_anti_armor_weapon_damage_mult:0 "Anti-Armor Weapons Damage"
+ mod_weapon_role_anti_armor_weapon_fire_rate_mult:0 "Anti-Armor Weapons Attack Speed"
 
  mod_megastructures_physics_research_produces_mult:0 "Megastructure £physics_research£ Physics Research Output"
  mod_megastructures_society_research_produces_mult:0 "Megastructure £society_research£ Society Research Output"
@@ -426,14 +444,14 @@
  ##############
  ## stations ##
  #85 - starbases trade range bonus (further trade routes)
- GT_starbase_trade_collection_range_add:0 "Plotted Hyperlanes"
- GT_starbase_trade_collection_range_add_desc:0 "By sending scout ships to map out specific hyperlanes for trade use, our trade ships can travel farther and faster with little risk."
+ GT_starbase_trade_collection_range_add:0 "Commerce Hyperlanes"
+ GT_starbase_trade_collection_range_add_desc:0 "Providing offices for trading companies can drastically improve our empires trade capability. Being in close proximity to each other they can establish safe trade routes. Their trade ships can travel farther and faster with little added risk."
  #86 - starbases build ships faster when we are defending (defensive war)
  GT_starbase_defensive_war_ship_build_speed_mult:0 "Demagogue's Fervor"
  GT_starbase_defensive_war_ship_build_speed_mult_desc:0 "Demagogues are often painted in a poor light, though there is no questioning their effectiveness in convincing the population to act in times of need."
  #87 - starbases trade protection range bonus
- GT_starbase_trade_protection_range_add:0 "Picket Ships"
- GT_starbase_trade_protection_range_add_desc:0 "Small escort cruisers have proven remarkably effective in reducing the danger of trade routes being plundered by unprepared enemies."
+ GT_starbase_trade_protection_range_add:0 "Privateers"
+ GT_starbase_trade_protection_range_add_desc:0 "Commercial incentives have proven to be remarkably effective in reducing the danger of trade routes being plundered."
  #82 - cheaper mining station construction cost
  GT_station_gatherers_build_cost_mult:0 "Mining Administrations"
  GT_station_gatherers_build_cost_mult_desc:0 "Industry and mining are necessary evils in order to continue providing for an ever-expanding civilization. The construction and maintenance of mining facilities is a drain on any government, and the formation of mining administrations has lessened the burden."

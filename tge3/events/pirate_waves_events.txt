@@ -36,7 +36,7 @@ event = {
 					}	
 					country_event = { 
 						id = pirate_waves.4
-						days = 30
+						days = 360
 					}	
 					# log = "Spawning a Pirate Freehold"
 				}
@@ -859,6 +859,9 @@ fleet_event = {
 			closest_system = {
 				limit = {
 					exists = space_owner
+					space_owner = {
+						is_country_type = default
+					}
 				}
 				space_owner = {			
 					owner_species = { 
@@ -1317,24 +1320,29 @@ planet_event = {
 					fleet_event = {
 						id = pirate_waves.2
 						days = 30
+						random = 900
 					}	
 					fleet_event = {
 						id = pirate_waves.2
 						days = 60
+						random = 1800
 					}
 					fleet_event = {
 						id = pirate_waves.2
 						days = 90
+						random = 3600
 					}			
 					fleet_event = {
 						id = pirate_waves.69
 						days = 30
+						random = 1800
 					}					
 					if = {
 						limit = { years_passed >= 40 }
 						fleet_event = {
 							id = pirate_waves.69
 							days = 60
+							random = 1800
 						}
 					}
 					if = {
@@ -1342,6 +1350,7 @@ planet_event = {
 						fleet_event = {
 							id = pirate_waves.69
 							days = 90
+							random = 1800
 						}
 					}
 					if = {
@@ -1349,6 +1358,7 @@ planet_event = {
 						fleet_event = {
 							id = pirate_waves.69
 							days = 120
+							random = 1800
 						}
 					}				
 					if = {
@@ -1356,6 +1366,7 @@ planet_event = {
 						fleet_event = {
 							id = pirate_waves.69
 							days = 150
+							random = 1800
 						}
 					}					
 					if = {
@@ -1363,6 +1374,7 @@ planet_event = {
 						fleet_event = {
 							id = pirate_waves.71
 							days = 1800
+							random = 3600
 						}
 					}
 					if = {
@@ -1370,6 +1382,7 @@ planet_event = {
 						fleet_event = {
 							id = pirate_waves.71
 							days = 3600
+							random = 3600
 						}
 					}					
 				}

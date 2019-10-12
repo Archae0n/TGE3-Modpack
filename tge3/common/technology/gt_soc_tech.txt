@@ -403,9 +403,20 @@ GT_starbase_trade_collection_range_add = {
 	prerequisites = { "tech_interstellar_economics" }
 	weight = @tier3weight2
 	
-	modifier = {
-		country_trade_attractiveness = 0.20
+	potential = {
+		is_gestalt = no
 	}
+	
+	# prereqfor_desc = {
+		# custom = {
+			# title = "TECH_UNLOCK_GPM_TRADE_COLLECTION_MODULE"
+			# desc = "TECH_UNLOCK_GPM_TRADE_COLLECTION_MODULE_DESC"
+		# }
+	# }
+	
+	# modifier = {
+		# country_trade_attractiveness = 0.20
+	# }
 	
 	weight_modifier = {
 		modifier = {
@@ -477,9 +488,20 @@ GT_starbase_trade_protection_range_add = {
 	prerequisites = { "tech_interstellar_economics" }
 	weight = @tier3weight4
 	
-	modifier = {
-		starbase_trade_protection_range_add = 1
+	potential = {
+		is_gestalt = no
 	}
+	
+	# prereqfor_desc = {
+		# custom = {
+			# title = "TECH_UNLOCK_GPM_TRADE_PROTECTION_MODULE"
+			# desc = "TECH_UNLOCK_GPM_TRADE_PROTECTION_MODULE_DESC"
+		# }
+	# }
+	
+	# modifier = {
+		# starbase_trade_protection_range_add = 1
+	# }
 	
 	weight_modifier = {
 		modifier = {
@@ -2186,11 +2208,11 @@ GT_planet_researchers_society_research_produces_mult = {
 	weight = @tier2weight1
 	
 	modifier = {
-		planet_researchers_society_research_produces_mult = 0.20
+		num_tech_alternatives_add = 1
+		station_researchers_produces_mult = 0.25
 	}
 	
 	weight_modifier = {
-		factor = 0.25
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2221,11 +2243,11 @@ GT_planet_researchers_society_research_produces_mult2 = {
 	weight = @tier3weight4
 	
 	modifier = {
-		planet_researchers_society_research_produces_mult = 0.20
+		planet_researchers_society_research_produces_add = 0.5
+		station_researchers_produces_mult = 0.10
 	}
 	
 	weight_modifier = {
-		factor = 0.25
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2248,19 +2270,19 @@ GT_planet_researchers_society_research_produces_mult2 = {
 }
 # planet_researchers_society_research_produces_mult    # 3 #
 GT_planet_researchers_society_research_produces_mult3 = {
-	cost = @tier5cost1
+	cost = @tier4cost3
 	area = society
-	tier = 5
+	tier = 4
 	category = { biology }	
 	prerequisites = { "tech_society_3" "GT_planet_researchers_society_research_produces_mult2" }
-	weight = @tier5weight1
+	weight = @tier4weight3
 	
 	modifier = {
-		planet_researchers_society_research_produces_mult = 0.20
+		planet_researchers_society_research_produces_add = 0.5
+		station_researchers_produces_mult = 0.10
 	}
 	
 	weight_modifier = {
-		factor = 0.25
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2284,8 +2306,8 @@ GT_planet_researchers_society_research_produces_mult3 = {
 
 ####################
 ## megastructures ##
-# megastructures_engineering_research_produces_mult    # 3 #
-GT_megastructures_engineering_research_produces_mult = {
+# GT_megastructures_society_research_produces_mult    # 3 #
+GT_megastructures_society_research_produces_mult = {
 	cost = @tier5cost5
 	area = society
 	tier = 5
@@ -2295,7 +2317,7 @@ GT_megastructures_engineering_research_produces_mult = {
 	weight = @tier5weight5
 	
 	modifier = {
-		megastructures_engineering_research_produces_mult = 0.15
+		megastructures_society_research_produces_mult = 0.15
 	}
 	
 	weight_modifier = {

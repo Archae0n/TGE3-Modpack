@@ -1,0 +1,299 @@
+Update 10-05-2017
+Changelog:
+
+[h1]NEW:[/h1]
+[list]
+[*] 
+[/list]
+
+[h1]CHANGES:[/h1]
+[list]
+[*] Made compatible with version 1.6 of the game
+[*] Significantly increased the chance for techs to show up. 
+[/list]
+
+[h1]FIXES:[/h1]
+[list]
+[*] Fixed issue with tier 10 techs not showing up and science nexus not increasing the spawn chances of techs. This now also includes the science nexus you find and restore!
+[/list]
+
+
+Update 04-05-2017
+Changelog:
+
+[h1]NEW:[/h1]
+[list]
+[*] New Shields: Adaptive Shields. Story wise: These shields have AI integrated systems allowing the shields to quickly adapt their frequencies and focus on incoming fire (more shield regeneration, less hp, regen in combat). Materialists only.
+[/list]
+
+[h1]CHANGES:[/h1]
+[list]
+[*] Advanced component techs won't show up before 80 years have passed in the game. Every 20 years after that there is a chance the next tiers show up.
+[*] Ship Hangars, targeting matrix and other 'new' modules will show up a lot sooner. 
+[*] Advanced component techs have a much higher chance to show up after a few years/decades if you still haven't gotten them. This to ensure no one has "too much bad luck".
+[*] Advanced component techs are far more likely to show up when you have a Science Nexus megastructure. (+500%)
+[*] IF you have the Utopia Expansion: The Last tier of advanced weapons tech will only start showing up if you have the Science Nexus Megastructure and 150 years have passed. This does not count for Ship Hangars, targeting matrix and other 'new' modules, they do not require the science nexus.
+[*] If you don't have the Utopia Expansion: The last tier of advanced techs won’t show up until 150 years have passed.
+[*] Advanced non-weapons techs are a bit more spread out in years. You won't see the next level until several years have passed.
+[*] All weapons and module techs(in this mod) have 500% higher chance to show up in the tech tree if you have the Science Nexus Megastructure.
+[*] Crystallis Infused shields are now Hivemind only (Same as hardened shields)
+[*] Psionic Shields are Psionics only (psionic tech required) (more regeneration, less shield hp)
+[*] Force Fields (Shields) are for everyone else.
+[*] Robotic crews turned into AI Crew; only if you unlock droid robot workers tech. 
+[*] AI crew is not materialist only. 
+[*] Psionic crews turned into Psionic Crew: only if you have psionic tech.
+[*] Clone crews turned into drone crew: Only with clone tech. Not if you are egalitarian.
+[*] Purifier crews turned into purifier crew: only if you have civic: fanatic_purifier
+[*] Slave ship crews turned into slave ship crew: only for Authoritarian empires.
+[*] Civilian ship crews turned into regular ship crew: for everyone else.
+[*] Volunteer crews removed.
+[*] Base tech required to unlock crews is spaceport 5.
+[*] Some weapon rebalance, back to following vanilla bonuses (armor pen/shield damage, etc).
+[*] Laser Tier 6 and 7 dps slightly buffed.
+[*] Autocannon Tier 4 and 5 dps slightly nerfed.
+[*] Shield Capacitors tier 2 and 3 shield regeneration bonus reduced from 75%/100% to 60%/70%. Power requirements also reduced. 
+[*] New tier 10 armor icon (finally it doesn't like shit)
+[*] Research techs research bonus reduced from 9% each to 5% each
+[/list]
+
+[h1]FIXES:[/h1]
+[list]
+[*] Fixed autocannon sounds not working.
+[*] A lot of localisation fixes.
+[*] Science lab fixes so they work (following their 1.5 game curator lab fixes)
+[/list]
+
+
+In Short: Expect to hold an arms race with your enemies and allies every 20 years for the next tech advancements in weapons and components! The AI will aggressively try and tech these so you better keep up! Alternatively, steal the tech from their destroyed ships! ;)
+
+
+
+
+
+
+Update 06-04-2017
+	[b]Changes:[/b]
+	[list]
+	[*] Removed Power Core sub mod compatibility, will return in a seperate patch. This to fix a weird ship builder auto-complete bug.
+	[*] Updated missile stats to match the game update changes
+	[*] Changed psionic shield pre-requirements to require the new psionic shields from the base game.
+	[/list]
+
+
+Update 07-03-2017
+	[b]Changes:[/b]
+	[list]
+	[*]increased extra dimentianal accuracy and damage for the new tiers.
+	[*]removed the small hull regen bonus from crystaline armor
+	[*]Crystalline Armor will now provide a small hull hp bonus
+	[*]lowered the hull regen bonus from crystal infused plating to better balance endgame.
+	[*]This mod's modules and weapons can now auto-upgrade to their next level when "auto-upgrade" is enabled in the ship builder.
+	[*]Crystaline Reactor tech is a bit rarer now.
+	[*] The following weapon systems new tiers fire rate has been reduced by half, but deal twice as much damage (so effective DPS remains the same). This to reduce graphical effect clutter late game when ships have a lot of bonus fire rate. This also makes for much more beautiful battle scenes!
+	[*] - Plasma
+	[*] - Rail guns
+	[*] - Lasers
+	[*] - Extra Dimentional
+	[*] - Disruptor
+	[*]Reverted previous changes to shield regeneration. Turns out ships ended up being far too hard to destroy with enough + shield regen modules and repeatable techs. It's back to the vanilla system where a small shield has more regen but less hp compared to medium and large shields. Example, small shield X now has 4.6 regen, medium X now has 6.6 regen (instead of 9.2), and large x now has 8.8 regen (instead of  18.4). 
+	[*] Extra Dimentional weapons now have much cooler firing graphics (more plasma orb/beam)
+	[*] Some tweaks to auxilary module AI weights
+	[/list]
+	
+	[b]New stuff:[/b]
+	[list]
+	[*] Two new tiers of shield capacitors
+	[*] Two new advanced bombers, one normal new tier and one "Extra-Dimensional Armed" which is unlocked after researching dimensional weapons. 
+	[*] A new advanced fighter 
+	[*] Tier 4 and 5 autocannons have new firing effects.
+	[*]
+	[/list]
+
+Update 28-11-2016
+	[b]Changes:[/b]
+	[list]
+	[*]Some of the new weapon tiers have had their negative bonuses removed to better balance them (see lasers doing less damage to shields). Hopefully endgame balance isn't all about kinetic anymore.
+	[*]Missiles 6 max range has been increased by 25. (75/95/115 instead of 50/70/90)
+	[*]Missiles 7 max range has been increased by 50. (100/120/140 instead of 50/70/90)
+	[*]Swarm Missiles 3 max range has been increased by 20. (70 instead of 50)
+	[*]Swarm Missiles 4 max range has been increased by 40. (90 instead of 50)
+	[*]Torpedoes 4 max range has been increased by 70. (130 instead of 60)
+	[*]Torpedoes 5 max range has been increased by 90. (150 instead of 60)
+	[*]Energy Torpedoes 3 max range has been increased by 20. (90 instead of 70)
+	[*]Energy Torpedoes 4 max range has been increased by 40. (110 instead of 70)
+	[*]PD and Flak batteries new tiers also gain 5 increase in range each
+	
+	[*]Crystallis Reactors scale a bit more at higher tiers and provide a slight bit more power to compensate for the power requirements of the new weapons.
+	[*]Changed the bonus research engineering and physics techs from +tile research bonuses to empire research bonuses. 
+	[*]Made new weapon tiers, and last tiers of other modules a fair bit rarer in the tech tree. It should be less likely you get the next tier tech imediatly after researching the previous one.
+	[*]Final tier techs are now clasified as "dangerous tech". This to make it clearer they are the final tier and to add a bit of flavour to the game.
+	[*]Some module techs are now normal while later tiers of them are clasified as rare.
+	[/list]
+	
+	[b]Icon changes:[/b]
+	[list]
+	[*]Improved/New ship crystallis reactor icons
+	[*]New Crystalline Armor icons
+	[*]Improved ALL technology icons, they now have a matching background to their field (physics/eng/soci)
+	[/list]
+
+Update 6-11-2016
+	[b]Added new weapon effects for the following weapons:[/b]
+	[list]
+	[*]Energy Lances: Tetryon and Polaron
+	[*]Disruptors: Resonant and Muon
+	[*]Disintegrators: Improved and Matter-Energy
+	[*]Arc Emitters: Vexed and Concerted
+	[*]Cloud Lightning: Resonating and Luminous
+	[/list]
+	Some effects behave slightly different(cooler!) from their previous base game versions too!
+	
+	[b]bugfixes:[/b]
+	[list]
+	[*]Fixed Resonating and Luminous missing names in ship builder.
+	[*]Fixed Missing Concerted arc emmiter icon.
+	[/list]
+
+Update 5-11-2016 ** Weapon expansion **
+	
+	
+	[b]Changes:[/b]
+	
+	[b] Complete naming overhall of the following modules:[/b]
+	[list]
+	[*] Crystal Armor 
+	[*] Shields
+	[*] Crystallis-tissues
+	[*] crystallis-targetting matrix
+	[*] armor plating
+	[*] hangar bays 
+	[/list]
+	This to make them more unique in name and feel less boring.
+	
+	-----
+	
+	[list]
+	[*]Ship crews are now cheaper in mineral cost.
+	[*]Early Psionic Thrusters shield bonus reduced. Now provides 50/100/250/500 shield bonus instead of 200/300/400/500. This to balance early game a bit.
+	[*]Ship crew stats lowered slightly to 4/8/12% (from 5/10/15%)
+	[*]phase-shields/Psionic barriers/force-fields balance pass; lowered shield values, especially the high tier ones. Crystalline shields are base, psionic shields have 20% less shield hp but 20% more regen. Hardened shields have 20% more shield hp but 20% less regen. Regen values normalised across size.
+	[*]Removed reactor damage bonus as we have new weapon tiers now.
+	[*]Modules and weapons should now be nearly ordered under their vanilla counterparts! No more scrolling up and down so much!
+	[/list]
+	
+	-----
+	
+	[b]New stuff:[/b]
+	[list]
+	[*]3 new physics technologies to help you speed up physics tech research. As my mod adds MANY new techs for each component it was starting to slow down overall progression a lot. 
+	[*]3 new Engieering technologies to help you speed up Engineering tech research.
+	[*] 2 new Lasers: Positron and Anti-Matter
+	[*] 2 new Plasma cannons: Phased-Plasma and Chrono-Plasma
+	[*] 2 new Energy Lances: Tetryon and Polaron
+	[*] 2 new Disruptors: Resonant and Muon
+	[*] 2 new Disintegrators: Improved and Matter-Energy
+	[*] 2 new Arc Emitters: Vexed and Concerted
+	[*] 2 new Cloud Lightning: Resonating and Luminous
+
+	[*] 2 new Missiles: Isokinetic and Chroniton
+	[*] 2 new Swarm Missiles: Typhoon and Hurricane
+	[*] 2 new Torpedoes: Cobalt and Tricobalt
+	[*] 2 new Energy Torpedoes: Anti-Proton and Quantum
+
+	[*] 2 new Railguns: Tri-Gaus and XV-88
+	[*] 2 new Kinetic Guns: Kinetic Cannon and Kinetic Howitzer
+	[*] 2 new Autocannons: Thunder and Thor
+	[*] 2 new Mass Accelerators: Ultra Cannon and Omega Cannon
+
+	[*] 2 new Point Defense: Mercy and Emperor
+	[*] 2 new Flak: Flak Array and Flak Barrier
+	[/list]
+	
+	-----
+	
+	
+	
+	
+	
+	
+Update 27-10-2016
+	[list]
+	
+	[b]Changes:[/b]
+	[*]Updated to 1.3.1 of the game.
+	[*]Ship crew modules stats lowered a bit
+	[*]Crystallis-Laced Targetting Matrix damage bonus lowered a bit 
+	[*]Crystal-Laced Targetting Matrix power use increased a fair bit. This to balence stacking.
+	[*]Science ship deep space science labs stats changed to be in line with other science labs. Start with less bonuses and gain more with better ranked labs. 
+	[*]Fixed a bug where  Deep space science labs anomaly fail chance wasnt working properly
+	[*]Crystal infused tissue hull regen increased to 5/10/20/35/50% 
+	[*]Crystallis armor plating now has a very small bonus to ship hull regen as well.
+	[*]Crystal Forged Plating aux module now gives +10/20/30/40/50% to ship hull health.
+	
+	[*]New: Science ship Advanced Ship section; 2 Small, 2 Medium and 4 Auxillary slots! Unique new Tech to unlock. Has different ship model. (This model might change to a more neutral one in the future. )
+	[*]New: Alternative Auxillary ship sections for corvettes, destroyers, cruisers and battleships. Unlocks by Reasearching Tier 2-6 Space ports + Ship section techs for each ship type. They trade in 2 medium slot for an aux slot or a large for two aux slots. Destroyers trade in 2 small slots for 2 aux slots.
+	[*]New: Ship Hangar bays 1-5;  aux module that increases strike craft attack damage and flight speed! Research starts after researching strike craft 1 tech
+	
+Update 21-10-2016
+	[list]
+	
+	[b]Changes:[/b]
+	[*]Crystallis Armor values reduced to be in line with basegame armour and the new armour calculations. (with old values you could cap 90% reduction with just 3 modules.
+	[*]Slightly reduced tech costs to be in line with new vanilla values
+	[*]Added more AI weights to aux modules.
+	[*]Crystal Forged Plating aux module now gives +10/25/50/75/100% to ship hull health.
+	[*]
+	[*]Crystal-Laced Targeting Matrix is now a Offensive aux module:
+	[*]Crystal-Laced Targeting Matrix now gives +1/2/3/4/5 hit chance as well as tracking
+	[*]Crystal-Laced Targeting Matrix now gices a +5/10/15/20/25% damage bonus instead of attack speed bonus. 
+	[*]
+	[*]Ship crews are now a more general aux moduel, they no longer provice a damage bonus. 
+	[*]Ship crews AI weights adjusted so AI doesnt prefer them over the other aux modules.
+	[*]Ship crews now also prove a base combat speed bonus.
+	[*]Ship crews now all have increased base speed/combatspeed/hull bonus/shield bonus/armour bonus stats.
+	[*]
+	[*]Each type of ship crew also has a unique bonus ontop of the above bonuses. (Mostly like before):.
+	[*]Robot/droid/synth crews: +Evasion chance
+	[*]Psionic crews: +Sensor range
+	[*]Clone crews: -Ship upkeep cost
+	[*]Purifier crews: +damage
+	[*]Alien crews: -warp windwown (faster recovery after jumps)
+	[*]Civilian crews: +repair speed
+	[*]Volunteer crews: +warp/wormhole range chance
+	[*]Slave crews: +attack speed
+	[*]
+	[*]Armoured thrusters and psionic thrusters have had their armour and shield bonuses slightly reduced.
+	[*]Crystallis Reactors now all provide a small base weapon damage bonus. This should help balance the high defensive module increases late game.
+	[*]Improved localisation; ship crew pre-techs should now correctly state that they unlock actual clone crew technologies. (pre-tech -> crew tech -> crew module)
+	
+	[b]Fixes:[/b]
+	[*]Fixed and adjusted wrong hull regen values on crystallis-infused tissue, now regens 5/10/15/20/25%. 
+	[/list]
+
+Update 20-10-2016
+	[list]
+	[b][u]Made Compatible with Version 1.3 of the game[/u][/b]
+	[b]This is a compatibility patch. No new additions yet.[/b]
+	[b]This update breaks your 1.2 savegame (as does the game official 1.3 patch duo to the many changes to ship layouts/module slots.[/b]
+	
+	[b]Changes:[/b]
+	[*]Thruster pre-required Techs moved down a tier. (Armored/Psionic Thruster I now recuires Thrusters I (base) etc. 
+	[*]Crystal Forged Plating now uses the AUX slot.
+	[*]Crystal forged plating now provides a % hp bonus instead of a flat amount:  Rank II = 20%, II=30%, IV=40%, V=50%
+	[*]Crystal Infused Tissue now uses the AUX slot.
+	[*]Crystallis Infused Tissue hull regeneration increased from 7/9/11/13/15% per month to 10/15/20/25/30% per month.
+	[*]Crystal Targeting Matrix now uses the AUX slot.
+	[*]Crystal Targeting Matrix now provides a tracking bonus instead of a hit bonus: I = +1 tracking, II= +2, II = +3, IV= +4, V= +5
+	[*]Crystallis Targeting Matrix attack speed bonus increased from 2/3/4/5/6% to 10/15/20/25/30%
+	[*]Ship Crews now use the AUX slot
+	[*]Shields have their health bonus reduced slightly to be in line with the new shield hp values of the 1.3 patch. Around 10%~ reduction.
+	[*]Armoured and Psionic Thrusters I-IV now provide a 0/3/6/9 evasion bonus instead of dodge chance
+	[*]Armoured and Psionic thrusters I-IV now also provide a combat speed bonus that matches their normal speed bonus.
+	[*]Crystallis Sensors V-X now prodive a 10/11/12/13/14/15 tracking bonus instead of hit chance bonus.
+	[*]Fallen Empire and crisis ships no longer have my custom modules for the time being. This to make sure compatibility is maintained. This is also done until I have a good understanding of the new balance, especially with the Fallen Empire Awakening events. Should crisis appear very weak I will include my modules to beef them up. 
+	[/list]
+	
+	
+	
+	
+	-- Remove global ship designes and section templates!

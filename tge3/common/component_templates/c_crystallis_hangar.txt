@@ -28,11 +28,11 @@
 #############
 #	FLIGHTSPEED  #
 #############
-@flightspeed_1 = 0.05
-@flightspeed_2 = 0.10
-@flightspeed_3 = 0.15
-@flightspeed_4 = 0.20
-@flightspeed_5 = 0.25
+@flightspeed_1 = 0.10
+@flightspeed_2 = 0.15
+@flightspeed_3 = 0.25
+@flightspeed_4 = 0.33
+@flightspeed_5 = 0.50
 
 # Hangar Bays
 utility_component_template = {
@@ -55,13 +55,12 @@ utility_component_template = {
 	}
 	
 	ai_weight = {
-		weight = 5
+		weight = 30
 		modifier = {
-			factor = 2.0
-			is_preferred_weapons = weapon_type_strike_craft
+			factor = 0
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
 			has_monthly_income = { resource = exotic_gases value > 0 }
 		}
-
 		modifier = {
 			factor = 0
 			has_monthly_income = { resource = exotic_gases value <= 0 }
@@ -95,13 +94,12 @@ utility_component_template = {
 	}
 	
 	ai_weight = {
-		weight = 7
+		weight = 40
 		modifier = {
-			factor = 2.0
-			is_preferred_weapons = weapon_type_strike_craft
+			factor = 0
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
 			has_monthly_income = { resource = exotic_gases value > 0 }
 		}
-
 		modifier = {
 			factor = 0
 			has_monthly_income = { resource = exotic_gases value <= 0 }
@@ -135,13 +133,12 @@ utility_component_template = {
 	}
 	
 	ai_weight = {
-		weight = 9
+		weight = 50
 		modifier = {
-			factor = 2.0
-			is_preferred_weapons = weapon_type_strike_craft
+			factor = 0
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
 			has_monthly_income = { resource = exotic_gases value > 0 }
 		}
-
 		modifier = {
 			factor = 0
 			has_monthly_income = { resource = exotic_gases value <= 0 }
@@ -175,13 +172,12 @@ utility_component_template = {
 	}
 	
 	ai_weight = {
-		weight = 11
+		weight = 60
 		modifier = {
-			factor = 2.0
-			is_preferred_weapons = weapon_type_strike_craft
+			factor = 0
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
 			has_monthly_income = { resource = exotic_gases value > 0 }
 		}
-
 		modifier = {
 			factor = 0
 			has_monthly_income = { resource = exotic_gases value <= 0 }
@@ -215,13 +211,12 @@ utility_component_template = {
 	}
 	
 	ai_weight = {
-		weight = 13
+		weight = 70
 		modifier = {
-			factor = 2.0
-			is_preferred_weapons = weapon_type_strike_craft
+			factor = 0
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
 			has_monthly_income = { resource = exotic_gases value > 0 }
 		}
-
 		modifier = {
 			factor = 0
 			has_monthly_income = { resource = exotic_gases value <= 0 }

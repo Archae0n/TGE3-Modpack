@@ -1,0 +1,33 @@
+
+[h1]Guilli's Technologies[/h1]
+For version 2.3+ of the game. 
+Compatible with all DLC. DLCs not required.
+Compatible with all mods.
+[i]English and German Localisation[/]
+
+
+[list]
+[*] 125 new technologies
+[*] Vanilla-like technologies
+[*] Some rare technologies
+[*] Some gestalt, hive or machine unique technologies
+[*] Most technologies only show up when you do or encounter specific things
+[*] Some technology options dissapear after a while as the game progresses (eg; early science ship technologies)
+[/list]
+
+
+[b]Huge special thanks to Taylor for virtually all of the writing![/b]
+
+-
+
+
+[h1]Support my work[/h1]
+Hello, if you like what I do and wish to thank me for my work on this mod you can do so by donating a few dollars. This money will not go to waste and will help me greatly in my passion for modding. Any support is greatly appreciated! Thank you.
+
+[b][i]You can support me on Patreon[/i][/b]
+[url=https://www.patreon.com/GuillisMods][img]https://i.imgur.com/BTonHYz.png[/img] [/url] 
+
+[b][i]If you want to leave a small donation instead::[/i][/b]
+[url=https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2YNBVCV78USXN] [img]http://i.imgur.com/DR3G8dK.png[/img] [/url] 
+
+[h1]Thank You[/h1]

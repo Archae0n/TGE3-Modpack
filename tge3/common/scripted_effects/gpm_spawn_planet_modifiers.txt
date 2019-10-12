@@ -103,19 +103,12 @@ gpm_spawn_planet_modifier = {
 			modifier = { factor = 0
 				NOR = {
 					gpm_is_planet_tomb = yes 
-					#gpm_is_planet_gas_giant = yes
+					gpm_is_planet_gas_giant = yes
 					gpm_is_planet_dry_hot = yes
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					#is_planet_class = pc_hot_reducing
-					#is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					#is_planet_class = pc_methane
-					#is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -123,7 +116,6 @@ gpm_spawn_planet_modifier = {
 			modifier = { factor = 1.2 has_modifier = "low_gravity" }
 			modifier = { factor = 0.1 has_modifier = "high_gravity_2" }
 			modifier = { factor = 1.2 has_modifier = "low_gravity_2" }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			modifier = { factor = 3
 				OR = {
 					gpm_is_planet_barren = yes
@@ -145,19 +137,11 @@ gpm_spawn_planet_modifier = {
 			modifier = { factor = 0
 				NOR = {
 					gpm_is_planet_tomb = yes 
-					#gpm_is_planet_gas_giant = yes
+					gpm_is_planet_gas_giant = yes
 					gpm_is_planet_dry_hot = yes
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					#is_planet_class = pc_barren
-					#is_planet_class = pc_irradiated_marginal
-					#is_planet_class = pc_primordial
-					#is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
 				}
 			}
 			# TWeaks #
@@ -165,7 +149,6 @@ gpm_spawn_planet_modifier = {
 			modifier = { factor = 0.1 has_modifier = "low_gravity" }
 			modifier = { factor = 1.2 has_modifier = "high_gravity_2" }
 			modifier = { factor = 0.1 has_modifier = "low_gravity_2" }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0
 				OR = {
@@ -186,18 +169,9 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					#is_planet_class = pc_cold_reducing
-					#is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					#is_planet_class = pc_desolate
-					#is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
 				}
 			}
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0
 				OR = {
@@ -219,18 +193,9 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					#is_planet_class = pc_cold_reducing
-					#is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					#is_planet_class = pc_desolate
-					#is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
 				}
 			}
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0
 				OR = {
@@ -252,18 +217,9 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					#is_planet_class = pc_cold_reducing
-					#is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					#is_planet_class = pc_desolate
-					#is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
 				}
 			}
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Highly_Charged_Air_Particles" }
 		}
@@ -327,14 +283,13 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					gpm_is_planet_molten = yes
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
 			modifier = { factor = 0 is_planet_class = pc_gaia }
 			modifier = { factor = 0.2 is_moon = yes }
 			modifier = { factor = 0 OR = { gpm_is_planet_city = yes is_planet_class = pc_hive } }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0
 				OR = {
@@ -355,7 +310,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					gpm_is_planet_molten = yes
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -368,7 +323,6 @@ gpm_spawn_planet_modifier = {
 				} 
 			}
 			modifier = { factor = 0 OR = { gpm_is_planet_city = yes is_planet_class = pc_hive } }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0
 				OR = {
@@ -454,7 +408,6 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_frozen = yes
 				}
 			}
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0
 				OR = {
@@ -474,14 +427,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -517,14 +463,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -559,14 +498,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -602,14 +534,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -646,14 +571,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -682,14 +600,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_hot = yes
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -973,20 +884,12 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
 			modifier = { factor = 0.2 is_moon = yes }
 			modifier = { factor = 0 gpm_is_planet_molten = yes }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Extensive_Cavern_System" }
 		}
@@ -997,7 +900,6 @@ gpm_spawn_planet_modifier = {
 			# On these planets #
 			modifier = { factor = 0 NOT = { gpm_is_planet_molten = yes } }
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0
 				OR = {
@@ -1020,7 +922,6 @@ gpm_spawn_planet_modifier = {
 				}
 			}
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			modifier = { factor = 0
 				OR = {
 					is_planet_class = pc_floating
@@ -1078,14 +979,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -1097,7 +991,6 @@ gpm_spawn_planet_modifier = {
 					is_planet_class = pc_crystal
 				}
 			}
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "Gemstones" }
 		}
@@ -1112,20 +1005,12 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					#is_planet_class = pc_hot_reducing
-					#is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					#is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					#is_planet_class = pc_methane
-					#is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
 			modifier = { factor = 3 is_planet_class = pc_gaia }
 			modifier = { factor = 0 gpm_is_planet_toxic = yes }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -1317,7 +1202,6 @@ gpm_spawn_planet_modifier = {
 			modifier = { factor = 0 NOT = { gpm_is_planet_habitable = yes } }
 			# TWeaks #
 			modifier = { factor = 3 is_planet_class = pc_gaia }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "Pleasant_Weather" }
 		}
@@ -1332,14 +1216,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -1350,7 +1227,6 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_frozen = yes
 				}
 			}
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Unusual_Formations" }
 		}
@@ -1366,21 +1242,13 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					#is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
-			modifier = { factor = 0 OR = { gpm_is_planet_city = yes is_planet_class = pc_hive } }
+			modifier = { factor = 0 OR = { gpm_is_planet_city = yes is_planet_class = pc_hive is_planet_class = pc_ocean is_planet_class = pc_alpine } }
 			modifier = { factor = 1.2 has_modifier = "high_gravity" }
 			modifier = { factor = 1.2 has_modifier = "high_gravity_2" }
-			modifier = { factor = 0 is_planet_class = pc_ocean }
 			modifier = { factor = 3.5
 				OR = {
 					gpm_is_planet_barren = yes
@@ -1388,7 +1256,6 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_toxic = yes
 				}
 			}
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0
 				OR = {
@@ -1411,14 +1278,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -1430,7 +1290,6 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_frozen = yes
 				}
 			}
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0
 				OR = {
@@ -1469,7 +1328,6 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_frozen = yes
 				}
 			}
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Great_Temperature_Variation" }
 		}
@@ -1480,7 +1338,6 @@ gpm_spawn_planet_modifier = {
 			modifier = { factor = 0 NOT = { gpm_is_planet_habitable = yes } }
 			# TWeaks #
 			modifier = { factor = 3 is_planet_class = pc_gaia }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "Gorgeous_Sky" }
 		}
@@ -1496,7 +1353,6 @@ gpm_spawn_planet_modifier = {
 				}
 			}
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Ice_Age" }
 		}
@@ -1511,14 +1367,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					#is_planet_class = pc_hot_reducing
-					#is_planet_class = pc_cold_reducing
-					#is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					#is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -1544,14 +1393,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -1586,14 +1428,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -1628,14 +1463,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -1655,7 +1483,6 @@ gpm_spawn_planet_modifier = {
 			}
 			# TWeaks #
 			modifier = { factor = 0 is_planet_class = pc_gaia }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0
 				OR = {
@@ -1794,7 +1621,6 @@ gpm_spawn_planet_modifier = {
 			}
 			# TWeaks #
 			modifier = { factor = 2 is_moon = yes }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Ice_Flora" }
 		}
@@ -1810,7 +1636,6 @@ gpm_spawn_planet_modifier = {
 			}
 			# TWeaks #
 			modifier = { factor = 2 is_moon = yes }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Strange_Ice_River" }
 		}
@@ -1826,6 +1651,7 @@ gpm_spawn_planet_modifier = {
 			}
 			# TWeaks #
 			modifier = { factor = 0 gpm_is_planet_toxic = yes }
+			modifier = { factor = 0 is_planet_class = pc_alpine }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Juggernaut_Manta_Rays" }
 		}
@@ -1836,7 +1662,6 @@ gpm_spawn_planet_modifier = {
 			modifier = { factor = 0 NOT = { gpm_is_planet_wet_hot = yes } }
 			# TWeaks #
 			modifier = { factor = 2 is_moon = yes }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Black_Oily_Stone" }
 		}
@@ -1857,7 +1682,6 @@ gpm_spawn_planet_modifier = {
 			# On these planets #
 			modifier = { factor = 0 NOT = { gpm_is_planet_habitable = yes } }
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Cities_in_the_sky" }
 		}
@@ -1872,14 +1696,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					#is_planet_class = pc_hot_reducing
-					#is_planet_class = pc_cold_reducing
-					#is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					#is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -1929,14 +1746,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					#is_planet_class = pc_hot_reducing
-					#is_planet_class = pc_cold_reducing
-					#is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					#is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -1969,17 +1779,7 @@ gpm_spawn_planet_modifier = {
 			modifier = { factor = 0 NOT = { gpm_is_planet_uninhabitable = yes } }
 			# TWeaks #
 			modifier = { factor = 2 is_moon = yes }
-			modifier = { factor = 0
-				OR = {
-					gpm_is_planet_molten = yes
-					is_planet_class = pc_hothouse
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_orbiting_asteroid
-					is_planet_class = pc_radiated
-				}
-			}
+			modifier = { factor = 0	gpm_is_planet_molten = yes }
 			modifier = { factor = 2
 				OR = {
 					gpm_is_planet_barren = yes
@@ -1998,14 +1798,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_tomb = yes 
 					gpm_is_planet_dry_hot = yes
 					gpm_is_planet_wet_hot = yes
-					is_planet_class = pc_hot_reducing
-					#is_planet_class = pc_cold_reducing
-					#is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					#is_planet_class = pc_desolate
-					#is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -2027,14 +1820,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_tomb = yes 
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_cold = yes
-					#is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					#is_planet_class = pc_irradiated_marginal
-					#is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					#is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -2073,14 +1859,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					#is_planet_class = pc_hot_reducing
-					#is_planet_class = pc_cold_reducing
-					#is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					#is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -2112,22 +1891,15 @@ gpm_spawn_planet_modifier = {
 				}
 			}
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			modifier = { factor = 0 OR = { gpm_is_planet_city = yes is_planet_class = pc_hive } }
 			modifier = { factor = 0
 				OR = {
 					is_planet_class = pc_ocean
+					is_planet_class = pc_methane
 					is_planet_class = pc_desertislands
-					is_planet_class = pc_crystal
-					is_planet_class = pc_marginal_warm
-					is_planet_class = pc_mushroom
-					is_planet_class = pc_swamp
-					is_planet_class = pc_glacial
-					is_planet_class = pc_subarctic
-					is_planet_class = pc_ammonia
+					is_planet_class = pc_arid
+					is_planet_class = pc_desert
 					gpm_is_planet_dry_cold = yes
-					gpm_is_planet_dry_hot = yes
-					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# Not with these modifiers
@@ -2149,17 +1921,11 @@ gpm_spawn_planet_modifier = {
 			modifier = { factor = 0
 				OR = {
 					is_planet_class = pc_ocean
+					is_planet_class = pc_methane
 					is_planet_class = pc_desertislands
-					is_planet_class = pc_crystal
-					#is_planet_class = pc_marginal_warm
-					is_planet_class = pc_mushroom
-					#is_planet_class = pc_swamp
-					is_planet_class = pc_glacial
-					is_planet_class = pc_subarctic
-					is_planet_class = pc_ammonia
+					is_planet_class = pc_arid
+					is_planet_class = pc_desert
 					gpm_is_planet_dry_cold = yes
-					gpm_is_planet_dry_hot = yes
-					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# Not with these modifiers
@@ -2181,17 +1947,11 @@ gpm_spawn_planet_modifier = {
 			modifier = { factor = 0
 				OR = {
 					is_planet_class = pc_ocean
+					is_planet_class = pc_methane
 					is_planet_class = pc_desertislands
-					is_planet_class = pc_crystal
-					is_planet_class = pc_marginal_warm
-					is_planet_class = pc_mushroom
-					is_planet_class = pc_swamp
-					is_planet_class = pc_glacial
-					is_planet_class = pc_subarctic
-					is_planet_class = pc_ammonia
+					is_planet_class = pc_arid
+					is_planet_class = pc_desert
 					gpm_is_planet_dry_cold = yes
-					gpm_is_planet_dry_hot = yes
-					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# Not with these modifiers
@@ -2215,14 +1975,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -2243,14 +1996,7 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
@@ -2260,7 +2006,6 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_frozen = yes
 				}
 			}
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Periodic_Meteor_Showers" }
 		}
@@ -2352,7 +2097,6 @@ gpm_spawn_planet_modifier = {
 			}
 			# TWeaks #
 			modifier = { factor = 2 is_moon = yes }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0	has_modifier = "Exotic_Spices" }
 		}
@@ -2401,12 +2145,6 @@ gpm_spawn_planet_modifier = {
 				OR = {
 					gpm_is_planet_barren = yes
 					gpm_is_planet_frozen = yes
-					is_planet_class = pc_underground_rocky
-					is_planet_class = pc_underground_icy
-					is_planet_class = pc_desolate
-					is_planet_class = pc_primordial
-					is_planet_class = pc_hothouse
-					is_planet_class = pc_methane
 				}
 			}
 			# Not with these modifiers #
@@ -2432,27 +2170,10 @@ gpm_spawn_planet_modifier = {
 					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
-					is_planet_class = pc_hot_reducing
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_barren
-					is_planet_class = pc_irradiated_marginal
-					is_planet_class = pc_primordial
-					is_planet_class = pc_desolate
-					is_planet_class = pc_methane
-					is_planet_class = pc_hothouse
+					gpm_is_planet_uninhabitable = yes
 				}
 			}
 			# TWeaks #
-			modifier = { factor = 3
-				OR = {
-					is_planet_class = pc_geothermal
-					is_planet_class = pc_biolumen
-					is_planet_class = pc_arctic
-					is_planet_class = pc_glacial
-					is_planet_class = pc_marginal_cold
-				}
-			}
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0
 				OR = {
@@ -2472,7 +2193,6 @@ gpm_spawn_planet_modifier = {
 				}
 			}
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0	has_modifier = "Spirals_of_Ice" }
 		}
@@ -2504,7 +2224,6 @@ gpm_spawn_planet_modifier = {
 				}
 			}
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0	
 				OR = {
@@ -2535,7 +2254,6 @@ gpm_spawn_planet_modifier = {
 			# On these planets #
 			modifier = { factor = 0 NOT = { gpm_is_planet_habitable = yes } }
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0
 				OR = {
@@ -2559,7 +2277,6 @@ gpm_spawn_planet_modifier = {
 			}
 			# TWeaks #
 			modifier = { factor = 0	is_planet_class = pc_ocean }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0	has_modifier = "Otherworldly_Colours" }
 		}
@@ -2577,7 +2294,6 @@ gpm_spawn_planet_modifier = {
 				}
 			}
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Misty" }
 		}
@@ -2595,7 +2311,6 @@ gpm_spawn_planet_modifier = {
 			}
 			# TWeaks #
 			modifier = { factor = 0 OR = { gpm_is_planet_city = yes is_planet_class = pc_hive } }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Ecological_Nervous_System" }
 		}
@@ -2614,7 +2329,6 @@ gpm_spawn_planet_modifier = {
 			}
 			# TWeaks #
 			modifier = { factor = 2 gpm_is_planet_tomb = yes }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Carnivorous_Flies" }
 		}
@@ -2645,13 +2359,6 @@ gpm_spawn_planet_modifier = {
 				OR = {
 					gpm_is_planet_toxic = yes
 					is_planet_class = pc_alpine
-					is_planet_class = pc_marginal_warm
-					is_planet_class = pc_hajungle
-					is_planet_class = pc_tidallylocked
-					is_planet_class = pc_mushroom
-					is_planet_class = pc_glacial
-					is_planet_class = pc_subarctic
-					is_planet_class = pc_geothermal
 				}
 			}
 			# Not with these modifiers #
@@ -2673,7 +2380,6 @@ gpm_spawn_planet_modifier = {
 			# TWeaks #
 			modifier = { factor = 0 OR = { gpm_is_planet_city = yes is_planet_class = pc_hive } }
 			modifier = { factor = 0 gpm_is_planet_toxic = yes }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Warm_Water_Lakes" }
 		}
@@ -2685,7 +2391,6 @@ gpm_spawn_planet_modifier = {
 			# TWeaks #
 			modifier = { factor = 0 gpm_is_planet_toxic = yes }
 			modifier = { factor = 0 is_planet_class = pc_gaia }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Torrential_Rainstorms" }
 		}
@@ -2701,19 +2406,7 @@ gpm_spawn_planet_modifier = {
 			}
 			# TWeaks #
 			modifier = { factor = 0 OR = { gpm_is_planet_city = yes is_planet_class = pc_hive } }
-			modifier = { factor = 0
-				OR = {
-					gpm_is_planet_toxic = yes
-					is_planet_class = pc_alpine
-					is_planet_class = pc_marginal_warm
-					is_planet_class = pc_hajungle
-					is_planet_class = pc_tidallylocked
-					is_planet_class = pc_mushroom
-					is_planet_class = pc_glacial
-					is_planet_class = pc_subarctic
-					is_planet_class = pc_geothermal
-				}
-			}
+			modifier = { factor = 0 gpm_is_planet_toxic = yes }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Ocean_Currents" }
 		}
@@ -2733,13 +2426,6 @@ gpm_spawn_planet_modifier = {
 				OR = {
 					gpm_is_planet_toxic = yes
 					is_planet_class = pc_alpine
-					is_planet_class = pc_marginal_warm
-					is_planet_class = pc_hajungle
-					is_planet_class = pc_tidallylocked
-					is_planet_class = pc_mushroom
-					is_planet_class = pc_glacial
-					is_planet_class = pc_subarctic
-					is_planet_class = pc_geothermal
 				}
 			}
 			# Not with these modifiers #
@@ -2761,13 +2447,6 @@ gpm_spawn_planet_modifier = {
 				OR = {
 					gpm_is_planet_toxic = yes
 					is_planet_class = pc_alpine
-					is_planet_class = pc_marginal_warm
-					is_planet_class = pc_hajungle
-					is_planet_class = pc_tidallylocked
-					is_planet_class = pc_mushroom
-					is_planet_class = pc_glacial
-					is_planet_class = pc_subarctic
-					is_planet_class = pc_geothermal
 				}
 			}
 			# Not with these modifiers #
@@ -2789,13 +2468,6 @@ gpm_spawn_planet_modifier = {
 				OR = {
 					gpm_is_planet_toxic = yes
 					is_planet_class = pc_alpine
-					is_planet_class = pc_marginal_warm
-					is_planet_class = pc_hajungle
-					#is_planet_class = pc_tidallylocked
-					#is_planet_class = pc_mushroom
-					is_planet_class = pc_glacial
-					#is_planet_class = pc_subarctic
-					#is_planet_class = pc_geothermal
 				}
 			}
 			# Not with these modifiers #
@@ -2817,13 +2489,6 @@ gpm_spawn_planet_modifier = {
 				OR = {
 					gpm_is_planet_toxic = yes
 					is_planet_class = pc_alpine
-					is_planet_class = pc_marginal_warm
-					is_planet_class = pc_hajungle
-					is_planet_class = pc_tidallylocked
-					#is_planet_class = pc_mushroom
-					is_planet_class = pc_glacial
-					#is_planet_class = pc_subarctic
-					is_planet_class = pc_geothermal
 				}
 			}
 			# Not with these modifiers #
@@ -2873,7 +2538,6 @@ gpm_spawn_planet_modifier = {
 			# TWeaks #
 			modifier = { factor = 1.2 gpm_is_planet_city = yes }
 			modifier = { factor = 4 gpm_is_planet_tomb = yes }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Omnious_Fog" }
 		}
@@ -2928,7 +2592,6 @@ gpm_spawn_planet_modifier = {
 			# TWeaks #
 			modifier = { factor = 0 gpm_is_planet_gas_giant = yes }
 			modifier = { factor = 0 NOT = { has_moon = yes } }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0
 				OR = {
@@ -2945,7 +2608,6 @@ gpm_spawn_planet_modifier = {
 			# TWeaks #
 			modifier = { factor = 0 gpm_is_planet_gas_giant = yes }
 			modifier = { factor = 0 NOT = { has_moon = yes } }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0
 				OR = {
@@ -2988,7 +2650,6 @@ gpm_spawn_planet_modifier = {
 			# On these planets #
 			modifier = { factor = 0 NOT = { gpm_is_planet_habitable = yes } }
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Musical_Creatures" }
 		}
@@ -3026,7 +2687,6 @@ gpm_spawn_planet_modifier = {
 			# TWeaks #
 			modifier = { factor = 1.2 gpm_is_planet_city = yes }
 			modifier = { factor = 4 gpm_is_planet_tomb = yes }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Giant_Mold_Blobs" }
 		}
@@ -3044,7 +2704,6 @@ gpm_spawn_planet_modifier = {
 				}
 			}
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Subterranean_Eco_System" }
 		}
@@ -3103,7 +2762,6 @@ gpm_spawn_planet_modifier = {
 			modifier = { factor = 4 gpm_is_planet_tomb = yes }
 			modifier = { factor = 0 gpm_is_planet_toxic = yes }
 			modifier = { factor = 2	has_modifier = "Temple_of_the_Ancient_One" }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Strange_Alien_Eggs" }
 		}
@@ -3113,26 +2771,15 @@ gpm_spawn_planet_modifier = {
 			# On these planets #
 			modifier = { factor = 0
 				NOR = {
+					gpm_is_planet_tomb = yes 
+					gpm_is_planet_dry_hot = yes
+					gpm_is_planet_dry_cold = yes
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
 				}
 			}
 			# TWeaks #
-			modifier = { factor = 0
-				OR = {
-					is_planet_class = pc_ocean
-					is_planet_class = pc_tropical
-					is_planet_class = pc_desertislands
-					is_planet_class = pc_hajungle
-					is_planet_class = pc_mangrove
-					is_planet_class = pc_alpine	
-					is_planet_class = pc_glacial
-					is_planet_class = pc_subarctic
-					is_planet_class = pc_boreal
-					is_planet_class = pc_cascadian
-				}
-			}
-			modifier = { factor = 3 is_planet_class = pc_mushroom }
+			modifier = { factor = 0	is_planet_class = pc_arctic }
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -3169,7 +2816,6 @@ gpm_spawn_planet_modifier = {
 			# On these planets #
 			modifier = { factor = 0 NOT = { gpm_is_planet_barren = yes } }
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Water_Pockets" }
 		}
@@ -3197,13 +2843,12 @@ gpm_spawn_planet_modifier = {
 			# On these planets #
 			modifier = { factor = 0
 				NOR = {
-					is_planet_class = pc_barren_cold
-					is_planet_class = pc_frozen
+					gpm_is_planet_barren = yes
+					gpm_is_planet_frozen = yes
 				}
 			}
 			# TWeaks #
 			modifier = { factor = 3 is_moon = yes }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Hydrogen_Mist" }
 		}
@@ -3214,7 +2859,6 @@ gpm_spawn_planet_modifier = {
 			modifier = { factor = 0 NOT = { gpm_is_planet_toxic = yes }	}
 			# TWeaks #
 			modifier = { factor = 3 is_moon = yes }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Corrosive_Atmosphere" }
 		}
@@ -3278,7 +2922,6 @@ gpm_spawn_planet_modifier = {
 			modifier = { factor = 0 NOT = { gpm_is_planet_frozen = yes } }
 			# TWeaks #
 			modifier = { factor = 3 is_moon = yes }
-			modifier = { factor = 0 is_planet_class = pc_underground_icy }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Cracking_Surface" }
 		}
@@ -3294,11 +2937,8 @@ gpm_spawn_planet_modifier = {
 				OR = {
 					is_planet_class = pc_ammonia
 					is_planet_class = pc_methane
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_irradiated_marginal
 				}
 			}
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0
 				OR = {
@@ -3320,11 +2960,8 @@ gpm_spawn_planet_modifier = {
 				OR = {
 					is_planet_class = pc_ammonia
 					is_planet_class = pc_methane
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_irradiated_marginal
 				}
 			}
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0
 				OR = {
@@ -3346,8 +2983,6 @@ gpm_spawn_planet_modifier = {
 				OR = {
 					is_planet_class = pc_ammonia
 					is_planet_class = pc_methane
-					is_planet_class = pc_cold_reducing
-					is_planet_class = pc_irradiated_marginal
 				}
 			}
 			# Not with these modifiers #
@@ -3375,7 +3010,6 @@ gpm_spawn_planet_modifier = {
 			modifier = { factor = 0 NOT = { gpm_is_planet_barren = yes } }
 			# TWeaks #
 			modifier = { factor = 3 is_moon = yes }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Iron_Planet" }
 		}
@@ -3386,7 +3020,6 @@ gpm_spawn_planet_modifier = {
 			modifier = { factor = 0 NOT = { gpm_is_planet_barren = yes } }
 			# TWeaks #
 			modifier = { factor = 3 is_moon = yes }
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Carbon_Planet" }
 		}
@@ -3396,7 +3029,6 @@ gpm_spawn_planet_modifier = {
 			# On these planets #
 			modifier = { factor = 0 NOT = { gpm_is_planet_barren = yes } }
 			# TWeaks #
-			modifier = { factor = 0 is_planet_class = pc_underground_rocky }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Stellar_Irradiation" }
 		}
@@ -3540,7 +3172,6 @@ gpm_spawn_planet_modifier = {
 			# On these planets #
 			modifier = { factor = 0 NOT = { gpm_is_planet_toxic = yes } }
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Acid_Rain" }
 		}
@@ -3548,8 +3179,14 @@ gpm_spawn_planet_modifier = {
 			add_modifier = { days = -1 modifier = "Salt_Flats" }
 			modifier = { factor = @uncommon }
 			# On these planets #
-			modifier = { factor = 0	NOT = {	gpm_is_planet_dry_hot = yes	} }
+			modifier = { factor = 0 NOT = { gpm_is_planet_habitable = yes } }
 			# TWeaks #
+			modifier = { factor = 0
+				OR = {
+					is_planet_class = pc_ocean
+					is_planet_class = pc_gaia
+				}
+			}
 			# Not with these modifiers #
 			modifier = { factor = 0
 				AND = {
@@ -3585,7 +3222,6 @@ gpm_spawn_planet_modifier = {
 			# On these planets #
 			modifier = { factor = 0 NOT = { gpm_is_planet_toxic = yes } }
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Abundant_Natural_Radioactivity" }
 		}
@@ -3598,7 +3234,6 @@ gpm_spawn_planet_modifier = {
 			# TWeaks #
 			modifier = { factor = 0 is_moon = yes }
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
-			modifier = { factor = 3 is_planet_class = pc_primordial }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Proto_Planet" }
 		}
@@ -3618,7 +3253,6 @@ gpm_spawn_planet_modifier = {
 			# On these planets #
 			modifier = { factor = 0 NOT = { gpm_is_planet_ALL = yes } }
 			# TWeaks #
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Not with these modifiers #
 			modifier = { factor = 0 has_modifier = "Titanic_Geo_Form" }
 		}
@@ -3647,7 +3281,6 @@ gpm_spawn_planetary_rings_modifier = {
 			modifier = { factor = 0 has_global_flag = gpm_planetary_rings_disabled }
 			modifier = { factor = 0.5 gpm_is_planet_dwarf_star = yes }
 			modifier = { factor = 0.50 gpm_is_planet_uninhabitable = yes }
-			modifier = { factor = 1.33 is_planet_class = pc_hot_giant }
 			modifier = { factor = 0	solar_system = { exists = space_owner } }
 			modifier = { factor = 0 is_moon = yes }
 			# Not with these modifiers #
@@ -3685,7 +3318,6 @@ gpm_spawn_planetary_rings_modifier = {
 			modifier = { factor = 0 has_global_flag = gpm_planetary_rings_disabled }
 			modifier = { factor = 0.5 gpm_is_planet_dwarf_star = yes }
 			modifier = { factor = 0.50 gpm_is_planet_uninhabitable = yes }
-			modifier = { factor = 1.33 is_planet_class = pc_hot_giant }
 			modifier = { factor = 0	solar_system = { exists = space_owner } }
 			modifier = { factor = 0 is_moon = yes }
 			modifier = { factor = 0 num_moons > 0 }
@@ -3724,7 +3356,6 @@ gpm_spawn_planetary_rings_modifier = {
 			modifier = { factor = 0 has_global_flag = gpm_planetary_rings_disabled }
 			modifier = { factor = 0.5 gpm_is_planet_dwarf_star = yes }
 			modifier = { factor = 0.50 gpm_is_planet_uninhabitable = yes }
-			#modifier = { factor = 1.33 is_planet_class = pc_hot_giant }
 			modifier = { factor = 0	solar_system = { exists = space_owner } }
 			modifier = { factor = 0 is_moon = yes }
 			modifier = { factor = 0 num_moons > 0 }
@@ -3762,7 +3393,6 @@ gpm_spawn_planetary_rings_modifier = {
 			modifier = { factor = 0 gpm_has_real_space_rings = yes }
 			modifier = { factor = 0 has_global_flag = gpm_planetary_rings_disabled }
 			modifier = { factor = 0.5 gpm_is_planet_dwarf_star = yes }
-			#modifier = { factor = 1.33 is_planet_class = pc_hot_giant }
 			modifier = { factor = 0	solar_system = { exists = space_owner } }
 			modifier = { factor = 0 is_moon = yes }
 			modifier = { factor = 0 num_moons > 0 }
@@ -3801,7 +3431,7 @@ gpm_spawn_planetary_rings_modifier = {
 			modifier = { factor = 0 has_global_flag = gpm_planetary_rings_disabled }
 			modifier = { factor = 0.5 gpm_is_planet_dwarf_star = yes }
 			modifier = { factor = 0.33 gpm_is_planet_uninhabitable = yes }
-			modifier = { factor = 1.33 is_planet_class = pc_ice_giant }
+			modifier = { factor = 1.33 gpm_is_planet_gas_giant = yes }
 			modifier = { factor = 0	solar_system = { exists = space_owner } }
 			modifier = { factor = 0 is_moon = yes }
 			# Not with these modifiers #
@@ -3839,7 +3469,7 @@ gpm_spawn_planetary_rings_modifier = {
 			modifier = { factor = 0 has_global_flag = gpm_planetary_rings_disabled }
 			modifier = { factor = 0.5 gpm_is_planet_dwarf_star = yes }
 			modifier = { factor = 0.33 gpm_is_planet_uninhabitable = yes }
-			modifier = { factor = 1.33 is_planet_class = pc_ice_giant }
+			modifier = { factor = 1.33 gpm_is_planet_gas_giant = yes }
 			modifier = { factor = 0	solar_system = { exists = space_owner } }
 			modifier = { factor = 0 is_moon = yes }
 			modifier = { factor = 0 num_moons > 0 }
@@ -3878,7 +3508,7 @@ gpm_spawn_planetary_rings_modifier = {
 			modifier = { factor = 0 has_global_flag = gpm_planetary_rings_disabled }
 			modifier = { factor = 0.5 gpm_is_planet_dwarf_star = yes }
 			modifier = { factor = 0.33 gpm_is_planet_uninhabitable = yes }
-			modifier = { factor = 1.33 is_planet_class = pc_ice_giant }
+			modifier = { factor = 1.33 gpm_is_planet_gas_giant = yes }
 			modifier = { factor = 0	solar_system = { exists = space_owner } }
 			modifier = { factor = 0 is_moon = yes }
 			modifier = { factor = 0 num_moons > 0 }
@@ -3916,7 +3546,7 @@ gpm_spawn_planetary_rings_modifier = {
 			modifier = { factor = 0 gpm_has_real_space_rings = yes }
 			modifier = { factor = 0 has_global_flag = gpm_planetary_rings_disabled }
 			modifier = { factor = 0.5 gpm_is_planet_dwarf_star = yes }
-			modifier = { factor = 1.33 is_planet_class = pc_ice_giant }
+			modifier = { factor = 1.33 gpm_is_planet_gas_giant = yes }
 			modifier = { factor = 0	solar_system = { exists = space_owner } }
 			modifier = { factor = 0 is_moon = yes }
 			modifier = { factor = 0 num_moons > 0 }
