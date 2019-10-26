@@ -9,7 +9,65 @@ anti_piracy_initiative = {
         category_voidcraft_research_speed_mult = 0.5
         
 }
-
+vengeance_fallen = {
+    name = "Vengeance to the Fallen"
+    icon = "gfx/interface/icons/modifiers/mod_country_insult_efficiency.dds"    
+	planet_pops_upkeep_mult = -0.50
+        country_war_exhaustion_mult = -0.50
+}
+negative_pr = {
+    name = "Negative PR"
+    icon = "gfx/interface/icons/modifiers/mod_country_insult_efficiency.dds"    
+	pop_ethic_xenophobe_attraction_mult = 1.00
+	trade_value_mult = -0.20
+        
+}
+militarized_response = {
+    name = "Militarized Response"
+    icon = "gfx/interface/icons/modifiers/mod_country_insult_efficiency.dds"    
+        starbase_shipyard_build_speed_mult = 0.50
+        starbase_shipyard_build_cost_mult = -0.50
+	all_technology_research_speed = -0.30
+	country_claim_influence_cost_mult = -0.50
+        
+}
+ai_bandaid = {
+    name = "Idiot AI Bandaid Fix"
+    icon = "gfx/interface/icons/modifiers/mod_country_insult_efficiency.dds"    
+	country_base_minerals_produces_add = 100
+	country_base_energy_produces_add = 100
+	country_base_food_produces_add = 100
+	country_base_consumer_goods_produces_add = 100
+        country_base_alloys_produces_add = 100
+	country_base_rare_crystals_produces_add = 20
+	country_base_exotic_gases_produces_add = 20
+	country_base_volatile_motes_produces_add = 20
+	planet_pops_upkeep_mult = -0.75
+}
+materialist_attraction = {
+    name = "Materialist Attraction"
+    icon = "gfx/interface/icons/modifiers/mod_country_insult_efficiency.dds"    
+	pop_ethic_materialist_attraction_mult = 1.00
+        
+}
+inward_development = {
+    name = "Inward Development"
+    icon = "gfx/interface/icons/modifiers/mod_country_insult_efficiency.dds"    
+	pop_ethic_spiritualist_attraction_mult = 1.00
+        
+}
+weapon_dealers = {
+    name = "Weapon Dealers"
+    icon = "gfx/interface/icons/modifiers/mod_country_insult_efficiency.dds"    
+        trade_value_mult = 0.25
+        
+}
+corporate_weapon_dealers = {
+    name = "Corporate Weapon Dealers"
+    icon = "gfx/interface/icons/modifiers/mod_country_insult_efficiency.dds"    
+    	trade_value_mult = 0.40
+        
+}
 
 extsynths_modifier = {
 	planet_pop_assembly_mult = 0.33
